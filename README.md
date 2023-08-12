@@ -40,7 +40,7 @@ let feedURL = URL(string: "http://images.apple.com/main/rss/hotnews/hotnews.rss"
 
 Get an instance of `FeedParser`
 ```swift
-let parser = FeedParser(URL: feedURL) // or FeedParser(data: data) or FeedParser(xmlStream: stream)
+let parser = FeedParser(url: feedURL) // or FeedParser(data: data) or FeedParser(xmlStream: stream)
 ```
 
 Then call `parse` or `parseAsync` to start parsing the feed...

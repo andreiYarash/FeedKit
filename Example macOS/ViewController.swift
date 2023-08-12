@@ -38,7 +38,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let parser = FeedParser(URL: feedURL)
+        let parser = FeedParser(url: feedURL)
 
         // Parse asynchronously, not to block the UI.
         parser.parseAsync { [weak self] (result) in

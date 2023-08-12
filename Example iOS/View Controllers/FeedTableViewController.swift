@@ -29,7 +29,7 @@ let feedURL = URL(string: "http://images.apple.com/main/rss/hotnews/hotnews.rss"
 
 class FeedTableViewController: UITableViewController {
     
-    let parser = FeedParser(URL: feedURL)
+    let parser = FeedParser(url: feedURL)
     
     var rssFeed: RSSFeed?
         

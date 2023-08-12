@@ -40,9 +40,9 @@ public final class FeedParser {
    
     /// Initializes the parser with the JSON or XML content referenced by the given URL.
     ///
-    /// - Parameter URL: URL whose contents are read to produce the feed data
-    public init(URL: URL) {
-        self.url = URL
+    /// - Parameter url: URL whose contents are read to produce the feed data
+    public init(url: URL) {
+        self.url = url
     }
     
     /// Initializes the parser with the xml or json contents encapsulated in a 

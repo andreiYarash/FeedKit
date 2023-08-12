@@ -45,7 +45,7 @@ extension ParserError: LocalizedError {
         switch self {
         case .feedNotFound:
             return "Feed not found"
-        case .feedCDATABlockEncodingError(_):
+        case .feedCDATABlockEncodingError:
             return "`CDATAblock` encoding error"
         case .internalError(let reason):
             return "Internal unresolved error: \(reason)"
@@ -67,9 +67,9 @@ extension ParserError: LocalizedError {
         switch self {
         case .feedNotFound:
             return "Provide a valid Atom/RSS/JSON feed "
-        case .feedCDATABlockEncodingError(_):
+        case .feedCDATABlockEncodingError:
             return "Make sure the encoding provided in a `CDATABlock` is encoded as UTF-8"
-        case .internalError(_):
+        case .internalError:
             return "If you're seeing this error you probably should open an issue on github"
         }
     }
@@ -85,7 +85,7 @@ extension ParserError {
         switch self {
         case .feedNotFound: return -1000
         case .feedCDATABlockEncodingError: return -10001
-        case .internalError(_): return -90000
+        case .internalError: return -90000
         }
     }
     

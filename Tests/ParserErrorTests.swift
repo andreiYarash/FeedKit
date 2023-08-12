@@ -39,7 +39,7 @@ class ParserErrorTests: BaseTestCase {
         // Then
         switch result {
         case .failure(let error): XCTAssertEqual(error, .feedNotFound)
-        case .success(_): XCTFail("Unexpected feed found")
+        case .success: XCTFail("Unexpected feed found")
         }
         
     }

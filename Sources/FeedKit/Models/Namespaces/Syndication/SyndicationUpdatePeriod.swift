@@ -42,11 +42,11 @@ import Foundation
 ///
 /// - yearly: Every year, the channel is updated the number of times specified
 public enum SyndicationUpdatePeriod: String {
-    case hourly = "hourly"
-    case daily = "daily"
-    case weekly = "weekly"
-    case monthly = "monthly"
-    case yearly = "yearly"
+    case hourly
+    case daily
+    case weekly
+    case monthly
+    case yearly
 }
 
 extension SyndicationUpdatePeriod {

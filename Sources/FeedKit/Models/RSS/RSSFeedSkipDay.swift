@@ -39,13 +39,13 @@ import Foundation
 /// - saturday: Aggregator hint to skip parsing on `Saturday`.
 /// - sunday: Aggregator hint to skip parsing on `Sunday`.
 public enum RSSFeedSkipDay: String {
-    case monday = "monday"
-    case tuesday = "tuesday"
-    case wednesday = "wednesday"
-    case thursday = "thursday"
-    case friday = "friday"
-    case saturday = "saturday"
-    case sunday = "sunday"
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+    case sunday
 }
 
 extension RSSFeedSkipDay {

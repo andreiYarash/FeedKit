@@ -29,9 +29,9 @@ extension String {
     /// Convert a string representation of a logical value to it's `Bool`.
     /// equivalent
     func toBool() -> Bool? {
-        switch self {
-        case "True", "true", "Yes", "yes", "1": return true
-        case "False", "false", "No", "no", "0": return false
+        switch self.lowercased() {
+        case "true", "yes", "1": return true
+        case "false", "no", "0": return false
         default: return nil
         }
     }

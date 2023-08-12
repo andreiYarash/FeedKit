@@ -41,19 +41,13 @@ public struct JSONFeedHub {
 
 extension JSONFeedHub: Equatable {}
 
-// MARK: - Codable
+// MARK: - Decodable
 
-extension JSONFeedHub: Codable {
-    
+extension JSONFeedHub: Decodable {
+
     enum CodingKeys: String, CodingKey {
         case type
         case url
-    }
-    
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(type, forKey: .type)
-        try container.encode(url, forKey: .url)
     }
     
     public init(from decoder: Decoder) throws {

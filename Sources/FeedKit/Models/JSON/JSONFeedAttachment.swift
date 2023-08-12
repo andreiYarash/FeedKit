@@ -54,25 +54,16 @@ public struct JSONFeedAttachment {
 
 extension JSONFeedAttachment: Equatable {}
 
-// MARK: - Codable
+// MARK: - Decodable
 
-extension JSONFeedAttachment: Codable {
-    
+extension JSONFeedAttachment: Decodable {
+
     enum CodingKeys: String, CodingKey {
         case title
         case url
         case mime_type
         case size_in_bytes
         case duration_in_seconds
-    }
-    
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(title, forKey: .title)
-        try container.encode(url, forKey: .url)
-        try container.encode(mimeType, forKey: .mime_type)
-        try container.encode(sizeInBytes, forKey: .size_in_bytes)
-        try container.encode(durationInSeconds, forKey: .duration_in_seconds)
     }
     
     public init(from decoder: Decoder) throws {

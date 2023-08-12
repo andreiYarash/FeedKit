@@ -111,10 +111,10 @@ public struct JSONFeedItem {
 
 extension JSONFeedItem: Equatable {}
 
-// MARK: - Codable
+// MARK: - Decodable
 
-extension JSONFeedItem: Codable {
-    
+extension JSONFeedItem: Decodable {
+
     enum CodingKeys: String, CodingKey {
         case id
         case title
@@ -130,24 +130,6 @@ extension JSONFeedItem: Codable {
         case tags
         case author
         case attachments
-    }
-    
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(id, forKey: .id)
-        try container.encode(title, forKey: .title)
-        try container.encode(url, forKey: .url)
-        try container.encode(externalUrl, forKey: .external_url)
-        try container.encode(contentText, forKey: .content_text)
-        try container.encode(contentHtml, forKey: .content_html)
-        try container.encode(summary, forKey: .summary)
-        try container.encode(image, forKey: .image)
-        try container.encode(bannerImage, forKey: .banner_image)
-        try container.encode(datePublished, forKey: .date_published)
-        try container.encode(dateModified, forKey: .date_modified)
-        try container.encode(tags, forKey: .tags)
-        try container.encode(author, forKey: .author)
-        try container.encode(attachments, forKey: .attachments)
     }
     
     public init(from decoder: Decoder) throws {

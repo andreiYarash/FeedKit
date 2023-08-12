@@ -50,10 +50,10 @@ public struct JSONFeedAuthor {
 
 extension JSONFeedAuthor: Equatable {}
 
-// MARK: - Codable
+// MARK: - Decodable
 
-extension JSONFeedAuthor: Codable {
-    
+extension JSONFeedAuthor: Decodable {
+
     enum CodingKeys: String, CodingKey {
         case name
         case url

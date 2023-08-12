@@ -39,6 +39,7 @@ final class JSONFeedParser: FeedParserProtocol {
     func parse() -> Result<Feed, ParserError> {
         do {
             let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
             decoder.dateDecodingStrategy = .formatted(DateFormatter.sharedRFC3339)
             let decoded = try decoder.decode(JSONFeed.self, from: data)
             return .success(.json(decoded))

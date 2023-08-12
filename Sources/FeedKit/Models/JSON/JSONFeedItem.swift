@@ -113,41 +113,4 @@ extension JSONFeedItem: Equatable {}
 
 // MARK: - Decodable
 
-extension JSONFeedItem: Decodable {
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case title
-        case url
-        case external_url
-        case content_text
-        case content_html
-        case summary
-        case image
-        case banner_image
-        case date_published
-        case date_modified
-        case tags
-        case author
-        case attachments
-    }
-    
-    public init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(String.self, forKey: .id)
-        title = try values.decodeIfPresent(String.self, forKey: .title)
-        url = try values.decodeIfPresent(String.self, forKey: .url)
-        externalUrl = try values.decodeIfPresent(String.self, forKey: .external_url)
-        contentText = try values.decodeIfPresent(String.self, forKey: .content_text)
-        contentHtml = try values.decodeIfPresent(String.self, forKey: .content_html)
-        summary = try values.decodeIfPresent(String.self, forKey: .summary)
-        image = try values.decodeIfPresent(String.self, forKey: .image)
-        bannerImage = try values.decodeIfPresent(String.self, forKey: .banner_image)
-        datePublished = try values.decodeIfPresent(Date.self, forKey: .date_published)
-        dateModified = try values.decodeIfPresent(Date.self, forKey: .date_modified)
-        tags = try values.decodeIfPresent([String].self, forKey: .tags)
-        author = try values.decodeIfPresent(JSONFeedAuthor.self, forKey: .author)
-        attachments = try values.decodeIfPresent([JSONFeedAttachment].self, forKey: .attachments)
-    }
-    
-}
+extension JSONFeedItem: Decodable {}

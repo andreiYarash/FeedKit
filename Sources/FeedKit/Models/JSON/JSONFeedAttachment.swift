@@ -56,23 +56,4 @@ extension JSONFeedAttachment: Equatable {}
 
 // MARK: - Decodable
 
-extension JSONFeedAttachment: Decodable {
-
-    enum CodingKeys: String, CodingKey {
-        case title
-        case url
-        case mime_type
-        case size_in_bytes
-        case duration_in_seconds
-    }
-    
-    public init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        title = try values.decodeIfPresent(String.self, forKey: .title)
-        url = try values.decodeIfPresent(String.self, forKey: .url)
-        mimeType = try values.decodeIfPresent(String.self, forKey: .mime_type)
-        sizeInBytes = try values.decodeIfPresent(Int.self, forKey: .size_in_bytes)
-        durationInSeconds = try values.decodeIfPresent(TimeInterval.self, forKey: .duration_in_seconds)
-    }
-    
-}
+extension JSONFeedAttachment: Decodable {}

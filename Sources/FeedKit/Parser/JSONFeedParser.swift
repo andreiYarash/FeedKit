@@ -28,7 +28,7 @@ import Foundation
 /// the parsing of JSON Feeds.
 ///
 /// See: https://jsonfeed.org/version/1
-class JSONFeedParser: FeedParserProtocol {
+final class JSONFeedParser: FeedParserProtocol {
     
     let data: Data
     

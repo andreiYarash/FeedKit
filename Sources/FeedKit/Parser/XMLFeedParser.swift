@@ -30,7 +30,7 @@ import FoundationXML
 /// The actual engine behind the `FeedKit` framework. `XMLFeedParser` handles
 /// the parsing of RSS and Atom feeds. It is an `XMLParserDelegate` of
 /// itself.
-class XMLFeedParser: NSObject, XMLParserDelegate, FeedParserProtocol {
+final class XMLFeedParser: NSObject, XMLParserDelegate, FeedParserProtocol {
     
     /// The Feed Type currently being parsed. The Initial value of this variable
     /// is unknown until a recognizable element that matches a feed type is

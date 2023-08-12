@@ -29,7 +29,7 @@ import FoundationNetworking
 #endif
 
 /// An RSS and Atom feed parser. `FeedParser` uses `Foundation`'s `XMLParser`.
-public class FeedParser {
+public final class FeedParser {
     
     private var data: Data?
     private var url: URL?

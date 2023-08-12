@@ -62,8 +62,16 @@ final class RFC822DateFormatter: DateFormatter {
     }
     
     override func date(from string: String) -> Date? {
-        let string = string.trimmingCharacters(in: .whitespacesAndNewlines)
-        if let parsedDate = attemptParsing(from: string, formats: dateFormats) {
+        guard !string.isEmpty else {
+            return nil
+        }
+
+        let trimmedString = string.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard trimmedString.count > 0 else {
+            return nil
+        }
+
+        if let parsedDate = attemptParsing(from: trimmedString, formats: dateFormats) {
             return parsedDate
         }
         // See if we can lop off a text weekday, as DateFormatter does not
@@ -71,10 +79,8 @@ final class RFC822DateFormatter: DateFormatter {
         // "Tues, 6 November 2007 12:00:00 GMT" is rejected because of the "Tues",
         // even though "Tues" is used as an example for EEE in tr35-31.
         let trimRegEx = #/^[a-zA-Z]+, ([\w :+-]+)$/#
-        let trimmed = string.replacing(trimRegEx) { match in
-            match.output.1
-        }
-        return attemptParsing(from: trimmed, formats: backupFormats)
+        let weekdayTrimmed = trimmedString.replacing(trimRegEx, with: \.output.1)
+        return attemptParsing(from: weekdayTrimmed, formats: backupFormats)
     }
     
 }

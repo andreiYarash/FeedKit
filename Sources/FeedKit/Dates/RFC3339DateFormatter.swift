@@ -46,10 +46,18 @@ final class RFC3339DateFormatter: DateFormatter {
     }
     
     override func date(from string: String) -> Date? {
-        let string = string.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !string.isEmpty else {
+            return nil
+        }
+
+        let trimmedString = string.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard trimmedString.count > 0 else {
+            return nil
+        }
+
         for dateFormat in self.dateFormats {
             self.dateFormat = dateFormat
-            if let date = super.date(from: string) {
+            if let date = super.date(from: trimmedString) {
                 return date
             }
         }

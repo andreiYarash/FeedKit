@@ -31,6 +31,10 @@ extension String {
     ///
     /// - Returns: A `Date` object, or nil if the conversion failed.
     func toPermissiveDate() -> Date? {
+        guard !isEmpty else {
+            return nil
+        }
+        
         return DateFormatter.sharedRFC822.date(from: self) ??
             (DateFormatter.sharedRFC3339.date(from: self) ??
              DateFormatter.sharedISO8601.date(from: self))

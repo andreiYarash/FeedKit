@@ -71,7 +71,6 @@
 		A0F6B82D1F6E6EB800220625 /* ISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C31F6E6E9600220625 /* ISO8601DateFormatter.swift */; };
 		A0F6B82E1F6E6EB800220625 /* RFC3339DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C41F6E6E9600220625 /* RFC3339DateFormatter.swift */; };
 		A0F6B82F1F6E6EB800220625 /* RFC822DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C51F6E6E9600220625 /* RFC822DateFormatter.swift */; };
-		A0F6B8301F6E6EB800220625 /* Array + Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C71F6E6E9600220625 /* Array + Equatable.swift */; };
 		A0F6B8311F6E6EB800220625 /* String + toBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C81F6E6E9600220625 /* String + toBool.swift */; };
 		A0F6B8321F6E6EB800220625 /* String + toDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C91F6E6E9600220625 /* String + toDate.swift */; };
 		A0F6B8331F6E6EB800220625 /* String + toDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7CA1F6E6E9600220625 /* String + toDuration.swift */; };
@@ -162,7 +161,6 @@
 		A0F6B8891F6E6EBA00220625 /* ISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C31F6E6E9600220625 /* ISO8601DateFormatter.swift */; };
 		A0F6B88A1F6E6EBA00220625 /* RFC3339DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C41F6E6E9600220625 /* RFC3339DateFormatter.swift */; };
 		A0F6B88B1F6E6EBA00220625 /* RFC822DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C51F6E6E9600220625 /* RFC822DateFormatter.swift */; };
-		A0F6B88C1F6E6EBA00220625 /* Array + Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C71F6E6E9600220625 /* Array + Equatable.swift */; };
 		A0F6B88D1F6E6EBA00220625 /* String + toBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C81F6E6E9600220625 /* String + toBool.swift */; };
 		A0F6B88E1F6E6EBA00220625 /* String + toDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C91F6E6E9600220625 /* String + toDate.swift */; };
 		A0F6B88F1F6E6EBA00220625 /* String + toDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7CA1F6E6E9600220625 /* String + toDuration.swift */; };
@@ -253,7 +251,6 @@
 		A0F6B8E51F6E6EBA00220625 /* ISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C31F6E6E9600220625 /* ISO8601DateFormatter.swift */; };
 		A0F6B8E61F6E6EBA00220625 /* RFC3339DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C41F6E6E9600220625 /* RFC3339DateFormatter.swift */; };
 		A0F6B8E71F6E6EBA00220625 /* RFC822DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C51F6E6E9600220625 /* RFC822DateFormatter.swift */; };
-		A0F6B8E81F6E6EBA00220625 /* Array + Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C71F6E6E9600220625 /* Array + Equatable.swift */; };
 		A0F6B8E91F6E6EBA00220625 /* String + toBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C81F6E6E9600220625 /* String + toBool.swift */; };
 		A0F6B8EA1F6E6EBA00220625 /* String + toDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C91F6E6E9600220625 /* String + toDate.swift */; };
 		A0F6B8EB1F6E6EBA00220625 /* String + toDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7CA1F6E6E9600220625 /* String + toDuration.swift */; };
@@ -344,7 +341,6 @@
 		A0F6B9411F6E6EBB00220625 /* ISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C31F6E6E9600220625 /* ISO8601DateFormatter.swift */; };
 		A0F6B9421F6E6EBB00220625 /* RFC3339DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C41F6E6E9600220625 /* RFC3339DateFormatter.swift */; };
 		A0F6B9431F6E6EBB00220625 /* RFC822DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C51F6E6E9600220625 /* RFC822DateFormatter.swift */; };
-		A0F6B9441F6E6EBB00220625 /* Array + Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C71F6E6E9600220625 /* Array + Equatable.swift */; };
 		A0F6B9451F6E6EBB00220625 /* String + toBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C81F6E6E9600220625 /* String + toBool.swift */; };
 		A0F6B9461F6E6EBB00220625 /* String + toDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7C91F6E6E9600220625 /* String + toDate.swift */; };
 		A0F6B9471F6E6EBB00220625 /* String + toDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F6B7CA1F6E6E9600220625 /* String + toDuration.swift */; };
@@ -614,7 +610,6 @@
 		A0F6B7C31F6E6E9600220625 /* ISO8601DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601DateFormatter.swift; sourceTree = "<group>"; };
 		A0F6B7C41F6E6E9600220625 /* RFC3339DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFC3339DateFormatter.swift; sourceTree = "<group>"; };
 		A0F6B7C51F6E6E9600220625 /* RFC822DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFC822DateFormatter.swift; sourceTree = "<group>"; };
-		A0F6B7C71F6E6E9600220625 /* Array + Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + Equatable.swift"; sourceTree = "<group>"; };
 		A0F6B7C81F6E6E9600220625 /* String + toBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + toBool.swift"; sourceTree = "<group>"; };
 		A0F6B7C91F6E6E9600220625 /* String + toDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + toDate.swift"; sourceTree = "<group>"; };
 		A0F6B7CA1F6E6E9600220625 /* String + toDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + toDuration.swift"; sourceTree = "<group>"; };
@@ -931,7 +926,6 @@
 		A0F6B7C61F6E6E9600220625 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A0F6B7C71F6E6E9600220625 /* Array + Equatable.swift */,
 				A0F6B7C81F6E6E9600220625 /* String + toBool.swift */,
 				A0F6B7C91F6E6E9600220625 /* String + toDate.swift */,
 				A0F6B7CA1F6E6E9600220625 /* String + toDuration.swift */,
@@ -1579,7 +1573,6 @@
 			files = (
 				A0F6B8561F6E6EB800220625 /* MediaCredit.swift in Sources */,
 				A0F6B8511F6E6EB800220625 /* iTunesSubCategory.swift in Sources */,
-				A0F6B8301F6E6EB800220625 /* Array + Equatable.swift in Sources */,
 				A0F6B83E1F6E6EB800220625 /* AtomFeedEntryContributor.swift in Sources */,
 				A0F6B8591F6E6EB800220625 /* MediaGroup.swift in Sources */,
 				A0F6B85C1F6E6EB800220625 /* MediaLocation.swift in Sources */,
@@ -1775,7 +1768,6 @@
 			files = (
 				A0F6B90E1F6E6EBB00220625 /* MediaCredit.swift in Sources */,
 				A0F6B9091F6E6EBB00220625 /* iTunesSubCategory.swift in Sources */,
-				A0F6B8E81F6E6EBA00220625 /* Array + Equatable.swift in Sources */,
 				A0F6B8F61F6E6EBB00220625 /* AtomFeedEntryContributor.swift in Sources */,
 				A0F6B9111F6E6EBB00220625 /* MediaGroup.swift in Sources */,
 				A0F6B9141F6E6EBB00220625 /* MediaLocation.swift in Sources */,
@@ -1875,7 +1867,6 @@
 			files = (
 				A0F6B8B21F6E6EBA00220625 /* MediaCredit.swift in Sources */,
 				A0F6B8AD1F6E6EBA00220625 /* iTunesSubCategory.swift in Sources */,
-				A0F6B88C1F6E6EBA00220625 /* Array + Equatable.swift in Sources */,
 				A0F6B89A1F6E6EBA00220625 /* AtomFeedEntryContributor.swift in Sources */,
 				A0F6B8B51F6E6EBA00220625 /* MediaGroup.swift in Sources */,
 				A0F6B8B81F6E6EBA00220625 /* MediaLocation.swift in Sources */,
@@ -1975,7 +1966,6 @@
 			files = (
 				A0F6B96A1F6E6EBB00220625 /* MediaCredit.swift in Sources */,
 				A0F6B9651F6E6EBB00220625 /* iTunesSubCategory.swift in Sources */,
-				A0F6B9441F6E6EBB00220625 /* Array + Equatable.swift in Sources */,
 				A0F6B9521F6E6EBB00220625 /* AtomFeedEntryContributor.swift in Sources */,
 				A0F6B96D1F6E6EBB00220625 /* MediaGroup.swift in Sources */,
 				A0F6B9701F6E6EBB00220625 /* MediaLocation.swift in Sources */,

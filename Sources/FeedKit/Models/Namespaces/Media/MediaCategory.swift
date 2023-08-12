@@ -33,7 +33,7 @@ public final class MediaCategory {
         
         /// The URI that identifies the categorization scheme. It is an optional 
         /// attribute. If this attribute is not included, the default scheme
-        /// is "http://search.yahoo.com/mrss/category_schema".
+        /// is "https://search.yahoo.com/mrss/category_schema".
         public var scheme: String?
         
         /// The human readable label that can be displayed in end user 

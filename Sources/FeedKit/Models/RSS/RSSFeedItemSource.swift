@@ -32,7 +32,7 @@ import Foundation
 /// from its <title>. It has one required attribute, url, which links to the
 /// XMLization of the source.
 /// 
-/// <source url="http://www.tomalak.org/links2.xml">Tomalak's Realm</source>
+/// <source url="https://www.tomalak.org/links2.xml">Tomalak's Realm</source>
 /// 
 /// The purpose of this element is to propagate credit for links, to
 /// publicize the sources of news items. It can be used in the Post command
@@ -44,7 +44,7 @@ public final class RSSFeedItemSource {
     public final class Attributes {
 
         /// Required attribute of the `Source` element, which links to the 
-        /// XMLization of the source. e.g. "http://www.tomalak.org/links2.xml"
+        /// XMLization of the source. e.g. "https://www.tomalak.org/links2.xml"
         public var url: String?
         
     }

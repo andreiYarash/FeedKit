@@ -41,7 +41,7 @@ class RSS2Tests: BaseTestCase {
             XCTAssertNotNil(feed)
             
             XCTAssertEqual(feed?.title, "Iris")
-            XCTAssertEqual(feed?.link, "http://www.iris.news/", "")
+            XCTAssertEqual(feed?.link, "https://www.iris.news/", "")
             XCTAssertEqual(feed?.description, "The one place for you daily news.")
             XCTAssertEqual(feed?.language, "en-us")
             XCTAssertEqual(feed?.copyright, "Copyright 2015, Iris News")
@@ -61,7 +61,7 @@ class RSS2Tests: BaseTestCase {
             XCTAssertEqual(feed?.categories?.last?.attributes?.domain, "dmoz")
             
             XCTAssertEqual(feed?.generator, "Iris Gen")
-            XCTAssertEqual(feed?.docs, "http://blogs.law.harvard.edu/tech/rss")
+            XCTAssertEqual(feed?.docs, "https://blogs.law.harvard.edu/tech/rss")
             
             XCTAssertNotNil(feed?.cloud?.attributes)
             XCTAssertEqual(feed?.cloud?.attributes?.domain, "server.iris.com")
@@ -70,12 +70,12 @@ class RSS2Tests: BaseTestCase {
             XCTAssertEqual(feed?.cloud?.attributes?.protocolSpecification, "xml-rpc")
             XCTAssertEqual(feed?.cloud?.attributes?.registerProcedure, "cloud.notify")
             
-            XCTAssertEqual(feed?.rating, "(PICS-1.1 \"http://www.rsac.org/ratingsv01.html\" l by \"webmaster@example.com\" on \"2007.01.29T10:09-0800\" r (n 0 s 0 v 0 l 0))")
+            XCTAssertEqual(feed?.rating, "(PICS-1.1 \"https://www.rsac.org/ratingsv01.html\" l by \"webmaster@example.com\" on \"2007.01.29T10:09-0800\" r (n 0 s 0 v 0 l 0))")
             XCTAssertEqual(feed?.ttl, 60)
             
             XCTAssertNotNil(feed?.image)
-            XCTAssertEqual(feed?.image?.link, "http://www.iris.news/")
-            XCTAssertEqual(feed?.image?.url, "http://www.iris.news/image.jpg")
+            XCTAssertEqual(feed?.image?.link, "https://www.iris.news/")
+            XCTAssertEqual(feed?.image?.url, "https://www.iris.news/image.jpg")
             XCTAssertEqual(feed?.image?.title, "Iris")
             XCTAssertEqual(feed?.image?.description, "Read the Iris news feed.")
             XCTAssertEqual(feed?.image?.width, 64)
@@ -98,7 +98,7 @@ class RSS2Tests: BaseTestCase {
             XCTAssertEqual(feed?.textInput?.title, "TextInput Inquiry")
             XCTAssertEqual(feed?.textInput?.description, "Your aggregator supports the textInput element. What software are you using?")
             XCTAssertEqual(feed?.textInput?.name, "query")
-            XCTAssertEqual(feed?.textInput?.link, "http://www.iris.com/textinput.php")
+            XCTAssertEqual(feed?.textInput?.link, "https://www.iris.com/textinput.php")
             
         } catch {
             XCTFail(error.localizedDescription)
@@ -125,7 +125,7 @@ class RSS2Tests: BaseTestCase {
             XCTAssertEqual(feed?.items?.count, 2)
             
             XCTAssertEqual(feed?.items?.first?.title, "Seventh Heaven! Ryan Hurls Another No Hitter")
-            XCTAssertEqual(feed?.items?.first?.link, "http://dallas.example.com/1991/05/02/nolan.htm")
+            XCTAssertEqual(feed?.items?.first?.link, "https://dallas.example.com/1991/05/02/nolan.htm")
             XCTAssertEqual(feed?.items?.first?.author, "jbb@dallas.example.com (Joe Bob Briggs)")
             
             XCTAssertNotNil(feed?.items?.first?.categories)
@@ -139,14 +139,14 @@ class RSS2Tests: BaseTestCase {
             XCTAssertNotNil(feed?.items?.first?.categories?.last?.attributes)
             XCTAssertEqual(feed?.items?.first?.categories?.last?.attributes?.domain, "rec.arts.movies.reviews")
             
-            XCTAssertEqual(feed?.items?.first?.comments, "http://dallas.example.com/feedback/1983/06/joebob.htm")
+            XCTAssertEqual(feed?.items?.first?.comments, "https://dallas.example.com/feedback/1983/06/joebob.htm")
             XCTAssertEqual(feed?.items?.first?.description, "I'm headed for France. I wasn't gonna go this year, but then last week \"Valley Girl\" came out and I said to myself, Joe Bob, you gotta get out of the country for a while.")
             
             XCTAssertNotNil(feed?.items?.first?.enclosure)
             XCTAssertNotNil(feed?.items?.first?.enclosure?.attributes)
             XCTAssertEqual(feed?.items?.first?.enclosure?.attributes?.length, 24986239)
             XCTAssertEqual(feed?.items?.first?.enclosure?.attributes?.type, "audio/mpeg")
-            XCTAssertEqual(feed?.items?.first?.enclosure?.attributes?.url, "http://dallas.example.com/joebob_050689.mp3")
+            XCTAssertEqual(feed?.items?.first?.enclosure?.attributes?.url, "https://dallas.example.com/joebob_050689.mp3")
             
             XCTAssertNotNil(feed?.items?.first?.guid)
             XCTAssertEqual(feed?.items?.first?.guid?.value, "tag:dallas.example.com,4131:news")
@@ -157,10 +157,10 @@ class RSS2Tests: BaseTestCase {
             XCTAssertNotNil(feed?.items?.first?.source)
             XCTAssertEqual(feed?.items?.first?.source?.value, "Los Angeles Herald-Examiner")
             XCTAssertNotNil(feed?.items?.first?.source?.attributes)
-            XCTAssertEqual(feed?.items?.first?.source?.attributes?.url, "http://la.example.com/rss.xml")
+            XCTAssertEqual(feed?.items?.first?.source?.attributes?.url, "https://la.example.com/rss.xml")
             
             XCTAssertEqual(feed?.items?.last?.title, "Seventh Heaven! Ryan Hurls Another No Hitter")
-            XCTAssertEqual(feed?.items?.last?.link, "http://dallas.example.com/1991/05/02/nolan.htm")
+            XCTAssertEqual(feed?.items?.last?.link, "https://dallas.example.com/1991/05/02/nolan.htm")
             XCTAssertEqual(feed?.items?.last?.author, "jbb@dallas.example.com (Joe Bob Briggs)")
             
             XCTAssertNotNil(feed?.items?.last?.categories)
@@ -174,17 +174,17 @@ class RSS2Tests: BaseTestCase {
             XCTAssertNotNil(feed?.items?.last?.categories?.last?.attributes)
             XCTAssertEqual(feed?.items?.last?.categories?.last?.attributes?.domain, "rec.arts.movies.reviews")
             
-            XCTAssertEqual(feed?.items?.last?.comments, "http://dallas.example.com/feedback/1983/06/joebob.htm")
-            XCTAssertEqual(feed?.items?.last?.description, "I\'m headed for France. I wasn\'t gonna go this year, but then last week <a href=\"http://www.imdb.com/title/tt0086525/\">Valley Girl</a> came out and I said to myself, Joe Bob, you gotta get out of the country for a while.")
+            XCTAssertEqual(feed?.items?.last?.comments, "https://dallas.example.com/feedback/1983/06/joebob.htm")
+            XCTAssertEqual(feed?.items?.last?.description, "I\'m headed for France. I wasn\'t gonna go this year, but then last week <a href=\"https://www.imdb.com/title/tt0086525/\">Valley Girl</a> came out and I said to myself, Joe Bob, you gotta get out of the country for a while.")
             
             XCTAssertNotNil(feed?.items?.last?.enclosure)
             XCTAssertNotNil(feed?.items?.last?.enclosure?.attributes)
             XCTAssertEqual(feed?.items?.last?.enclosure?.attributes?.length, 24986239)
             XCTAssertEqual(feed?.items?.last?.enclosure?.attributes?.type, "audio/mpeg")
-            XCTAssertEqual(feed?.items?.last?.enclosure?.attributes?.url, "http://dallas.example.com/joebob_050689.mp3")
+            XCTAssertEqual(feed?.items?.last?.enclosure?.attributes?.url, "https://dallas.example.com/joebob_050689.mp3")
             
             XCTAssertNotNil(feed?.items?.last?.guid)
-            XCTAssertEqual(feed?.items?.last?.guid?.value, "http://dallas.example.com/item/1234")
+            XCTAssertEqual(feed?.items?.last?.guid?.value, "https://dallas.example.com/item/1234")
             XCTAssertNotNil(feed?.items?.last?.guid?.attributes)
             XCTAssertEqual(feed?.items?.last?.guid?.attributes?.isPermaLink, true)
             
@@ -193,7 +193,7 @@ class RSS2Tests: BaseTestCase {
             XCTAssertNotNil(feed?.items?.last?.source)
             XCTAssertEqual(feed?.items?.last?.source?.value, "Los Angeles Herald-Examiner")
             XCTAssertNotNil(feed?.items?.last?.source?.attributes)
-            XCTAssertEqual(feed?.items?.last?.source?.attributes?.url, "http://la.example.com/rss.xml")
+            XCTAssertEqual(feed?.items?.last?.source?.attributes?.url, "https://la.example.com/rss.xml")
             
         } catch {
             XCTFail(error.localizedDescription)

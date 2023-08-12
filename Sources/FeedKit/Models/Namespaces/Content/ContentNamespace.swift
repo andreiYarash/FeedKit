@@ -25,7 +25,7 @@
 import Foundation
 
 /// A module for the actual content of websites, in multiple formats. 
-/// See http://web.resource.org/rss/1.0/modules/content/
+/// See https://web.resource.org/rss/1.0/modules/content/
 public final class ContentNamespace {
     
     /// An element whose contents are the entity-encoded or CDATA-escaped version

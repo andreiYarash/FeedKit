@@ -38,7 +38,7 @@ import Foundation
 /// Two examples are provided below:
 /// 
 /// <category>Grateful Dead</category>
-/// <category domain="http://www.fool.com/cusips">MSFT</category>
+/// <category domain="https://www.fool.com/cusips">MSFT</category>
 /// 
 /// You may include as many category elements as you need to, for different
 /// domains, and to have an item cross-referenced in different parts of the
@@ -51,7 +51,7 @@ public final class RSSFeedItemCategory {
         /// A string that identifies a categorization taxonomy. It's an optional 
         /// attribute of `<category>`.
         /// 
-        /// Example: http://www.fool.com/cusips
+        /// Example: https://www.fool.com/cusips
         public var domain: String?
         
     }

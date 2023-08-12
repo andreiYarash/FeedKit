@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/">
-    <channel rdf:about="http://www.xml.com/xml/news.rss">
+<rdf:RDF xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="https://purl.org/rss/1.0/">
+    <channel rdf:about="https://www.xml.com/xml/news.rss">
         <dc:title>title</dc:title>
         <dc:creator>creator</dc:creator>
         <dc:subject>subject</dc:subject>
@@ -17,7 +17,7 @@
         <dc:coverage>coverage</dc:coverage>
         <dc:rights>rights</dc:rights>
     </channel>
-    <item rdf:about="http://xml.com/pub/2000/08/09/rdfdb/index.html">
+    <item rdf:about="https://xml.com/pub/2000/08/09/rdfdb/index.html">
         <dc:title>title</dc:title>
         <dc:creator>creator</dc:creator>
         <dc:subject>subject</dc:subject>

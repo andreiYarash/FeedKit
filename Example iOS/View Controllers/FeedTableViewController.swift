@@ -25,7 +25,7 @@
 import UIKit
 import FeedKit
 
-let feedURL = URL(string: "http://images.apple.com/main/rss/hotnews/hotnews.rss")!
+let feedURL = URL(string: "https://images.apple.com/main/rss/hotnews/hotnews.rss")!
 
 class FeedTableViewController: UITableViewController {
     

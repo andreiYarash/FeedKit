@@ -31,7 +31,7 @@ import Foundation
 /// Open Content Syndication (OCS) directory format. It supercedes the RSS 0.91 
 /// skipDay and skipHour elements.
 /// 
-/// See http://web.resource.org/rss/1.0/modules/syndication/
+/// See https://web.resource.org/rss/1.0/modules/syndication/
 public final class SyndicationNamespace {
     
     /// Describes the period over which the channel format is updated. Acceptable 

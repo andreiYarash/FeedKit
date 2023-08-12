@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>Iris</title>
-        <link>http://www.iris.news/</link>
+        <link>https://www.iris.news/</link>
         <description>The one place for you daily news.</description>
         <language>en-us</language>
         <copyright>Copyright 2015, Iris News</copyright>
@@ -13,13 +13,13 @@
         <category>Media</category>
         <category domain="dmoz">News/Media/Science</category>
         <generator>Iris Gen</generator>
-        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <docs>https://blogs.law.harvard.edu/tech/rss</docs>
         <cloud domain="server.iris.com" path="/rpc" port="80" protocol="xml-rpc" registerProcedure="cloud.notify" />
-        <rating>(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l by "webmaster@example.com" on "2007.01.29T10:09-0800" r (n 0 s 0 v 0 l 0))</rating>
+        <rating>(PICS-1.1 "https://www.rsac.org/ratingsv01.html" l by "webmaster@example.com" on "2007.01.29T10:09-0800" r (n 0 s 0 v 0 l 0))</rating>
         <ttl>60</ttl>
         <image>
-            <link>http://www.iris.news/</link>
-            <url>http://www.iris.news/image.jpg</url>
+            <link>https://www.iris.news/</link>
+            <url>https://www.iris.news/image.jpg</url>
             <title>Iris</title>
             <description>Read the Iris news feed.</description>
             <width>64</width>
@@ -40,33 +40,33 @@
             <title>TextInput Inquiry</title>
             <description>Your aggregator supports the textInput element. What software are you using?</description>
             <name>query</name>
-            <link>http://www.iris.com/textinput.php</link>
+            <link>https://www.iris.com/textinput.php</link>
         </textInput>
         <item>
             <title>Seventh Heaven! Ryan Hurls Another No Hitter</title>
-            <link>http://dallas.example.com/1991/05/02/nolan.htm</link>
+            <link>https://dallas.example.com/1991/05/02/nolan.htm</link>
             <author>jbb@dallas.example.com (Joe Bob Briggs)</author>
             <category>movies</category>
             <category domain="rec.arts.movies.reviews">1983/V</category>
-            <comments>http://dallas.example.com/feedback/1983/06/joebob.htm</comments>
+            <comments>https://dallas.example.com/feedback/1983/06/joebob.htm</comments>
             <description>I'm headed for France. I wasn't gonna go this year, but then last week "Valley Girl" came out and I said to myself, Joe Bob, you gotta get out of the country for a while.</description>
-            <enclosure length="24986239" type="audio/mpeg" url="http://dallas.example.com/joebob_050689.mp3" />
+            <enclosure length="24986239" type="audio/mpeg" url="https://dallas.example.com/joebob_050689.mp3" />
             <guid isPermaLink="false">tag:dallas.example.com,4131:news</guid>
             <pubDate>Fri, 05 Oct 2007 09:00:00 CST</pubDate>
-            <source url="http://la.example.com/rss.xml">Los Angeles Herald-Examiner</source>
+            <source url="https://la.example.com/rss.xml">Los Angeles Herald-Examiner</source>
         </item>
         <item>
             <title>Seventh Heaven! Ryan Hurls Another No Hitter</title>
-            <link>http://dallas.example.com/1991/05/02/nolan.htm</link>
+            <link>https://dallas.example.com/1991/05/02/nolan.htm</link>
             <author>jbb@dallas.example.com (Joe Bob Briggs)</author>
             <category>movies</category>
             <category domain="rec.arts.movies.reviews">1983/V</category>
-            <comments>http://dallas.example.com/feedback/1983/06/joebob.htm</comments>
-            <description>I'm headed for France. I wasn't gonna go this year, but then last week &lt;a href="http://www.imdb.com/title/tt0086525/"&gt;Valley Girl&lt;/a&gt; came out and I said to myself, Joe Bob, you gotta get out of the country for a while.</description>
-            <enclosure length="24986239" type="audio/mpeg" url="http://dallas.example.com/joebob_050689.mp3" />
-            <guid isPermaLink="true">http://dallas.example.com/item/1234</guid>
+            <comments>https://dallas.example.com/feedback/1983/06/joebob.htm</comments>
+            <description>I'm headed for France. I wasn't gonna go this year, but then last week &lt;a href="https://www.imdb.com/title/tt0086525/"&gt;Valley Girl&lt;/a&gt; came out and I said to myself, Joe Bob, you gotta get out of the country for a while.</description>
+            <enclosure length="24986239" type="audio/mpeg" url="https://dallas.example.com/joebob_050689.mp3" />
+            <guid isPermaLink="true">https://dallas.example.com/item/1234</guid>
             <pubDate>Fri, 05 Oct 2007 09:00:00 CST</pubDate>
-            <source url="http://la.example.com/rss.xml">Los Angeles Herald-Examiner</source>
+            <source url="https://la.example.com/rss.xml">Los Angeles Herald-Examiner</source>
         </item>
     </channel>
 </rss>

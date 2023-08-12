@@ -9,15 +9,15 @@
 ## Features
 
 - [x] [Atom](https://tools.ietf.org/html/rfc4287)
-- [x] RSS [0.90](http://www.rssboard.org/rss-0-9-0), [0.91](http://www.rssboard.org/rss-0-9-1), [1.00](http://web.resource.org/rss/1.0/spec), [2.00](http://cyber.law.harvard.edu/rss/rss.html)
+- [x] RSS [0.90](https://www.rssboard.org/rss-0-9-0), [0.91](https://www.rssboard.org/rss-0-9-1), [1.00](https://web.resource.org/rss/1.0/spec), [2.00](https://cyber.law.harvard.edu/rss/rss.html)
 - [x] [JSON](https://jsonfeed.org/version/1)  
 - [x] Namespaces
-    - [x] [Dublin Core](http://web.resource.org/rss/1.0/modules/dc/)
-    - [x] [Syndication](http://web.resource.org/rss/1.0/modules/syndication/)
-    - [x] [Content](http://web.resource.org/rss/1.0/modules/content/)
-    - [x] [Media RSS](http://www.rssboard.org/media-rss)
+    - [x] [Dublin Core](https://web.resource.org/rss/1.0/modules/dc/)
+    - [x] [Syndication](https://web.resource.org/rss/1.0/modules/syndication/)
+    - [x] [Content](https://web.resource.org/rss/1.0/modules/content/)
+    - [x] [Media RSS](https://www.rssboard.org/media-rss)
     - [x] [iTunes Podcasting Tags](https://help.apple.com/itc/podcasts_connect/#/itcb54353390)
-- [x] [Documentation](http://cocoadocs.org/docsets/FeedKit)
+- [x] [Documentation](https://cocoadocs.org/docsets/FeedKit)
 - [x] Unit Test Coverage
 
 ## Requirements
@@ -35,7 +35,7 @@ Installation >> [`instructions`](https://github.com/nmdias/FeedKit/blob/master/I
 
 Build a URL pointing to an RSS, Atom or JSON Feed.
 ```swift
-let feedURL = URL(string: "http://images.apple.com/main/rss/hotnews/hotnews.rss")!
+let feedURL = URL(string: "https://images.apple.com/main/rss/hotnews/hotnews.rss")!
 ```
 
 Get an instance of `FeedParser`

@@ -26,7 +26,7 @@ import Foundation
 
 /// Describes the individual path for each XML DOM element of an RDF feed
 ///
-/// See http://www.rssboard.org/rss-0-9-0
+/// See https://www.rssboard.org/rss-0-9-0
 enum RDFPath: String {
     
     case rdf                                            = "/rdf:RDF"

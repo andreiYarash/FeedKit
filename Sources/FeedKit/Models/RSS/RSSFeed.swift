@@ -25,7 +25,7 @@
 import Foundation
 
 /// Data model for the XML DOM of the RSS 2.0 Specification
-/// See http://cyber.law.harvard.edu/rss/rss.html
+/// See https://cyber.law.harvard.edu/rss/rss.html
 /// 
 /// At the top level, a RSS document is a <rss> element, with a mandatory
 /// attribute called version, that specifies the version of RSS that the
@@ -46,7 +46,7 @@ public final class RSSFeed {
     
     /// The URL to the HTML website corresponding to the channel.
     /// 
-    /// Example: http://www.goupstate.com/
+    /// Example: https://www.goupstate.com/
     public var link: String?
     
     /// Phrase or sentence describing the channel. 
@@ -58,10 +58,10 @@ public final class RSSFeed {
     /// The language the channel is written in. This allows aggregators to group 
     /// all Italian language sites, for example, on a single page. A list of 
     /// allowable values for this element, as provided by Netscape, is here:
-    /// http://cyber.law.harvard.edu/rss/languages.html
+    /// https://cyber.law.harvard.edu/rss/languages.html
     /// 
     /// You may also use values defined by the W3C:
-    /// http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
+    /// https://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
     /// 
     /// Example: en-us
     public var language: String?
@@ -113,7 +113,7 @@ public final class RSSFeed {
     /// stumble across an RSS file on a Web server 25 years from now and wonder 
     /// what it is.
     /// 
-    /// Example: http://blogs.law.harvard.edu/tech/rss
+    /// Example: https://blogs.law.harvard.edu/tech/rss
     public var docs: String?
     
     /// Allows processes to register with a cloud to be notified of updates to 
@@ -138,7 +138,7 @@ public final class RSSFeed {
     /// of /RPC2. The procedure to call is myCloud.rssPleaseNotify.
     /// 
     /// A full explanation of this element and the rssCloud interface is here:
-    /// http://cyber.law.harvard.edu/rss/soapMeetsRss.html#rsscloudInterface
+    /// https://cyber.law.harvard.edu/rss/soapMeetsRss.html#rsscloudInterface
     public var cloud: RSSFeedCloud?
 
     /// The PICS rating for the channel.
@@ -222,7 +222,7 @@ public final class RSSFeed {
     /// description is a synopsis of the story, and the link points to the full 
     /// story. An item may also be complete in itself, if so, the description 
     /// contains the text (entity-encoded HTML is allowed; see examples:
-    /// http://cyber.law.harvard.edu/rss/encodingDescriptions.html), and
+    /// https://cyber.law.harvard.edu/rss/encodingDescriptions.html), and
     /// the link and title may be omitted. All elements of an item are optional, 
     /// however at least one of title or description must be present.
     public var items: [RSSFeedItem]?
@@ -243,7 +243,7 @@ public final class RSSFeed {
     /// Open Content Syndication (OCS) directory format. It supercedes the RSS 0.91
     /// skipDay and skipHour elements.
     /// 
-    /// See http://web.resource.org/rss/1.0/modules/syndication/
+    /// See https://web.resource.org/rss/1.0/modules/syndication/
     public var syndication: SyndicationNamespace?
 
     /// iTunes Podcasting Tags are de facto standard for podcast syndication.

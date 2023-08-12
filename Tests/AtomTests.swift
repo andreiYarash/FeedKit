@@ -53,7 +53,7 @@ class AtomTests: BaseTestCase {
             
             XCTAssertNotNil(feed?.links?.first)
             XCTAssertNotNil(feed?.links?.first?.attributes)
-            XCTAssertEqual(feed?.links?.first?.attributes?.href, "http://example.org/")
+            XCTAssertEqual(feed?.links?.first?.attributes?.href, "https://example.org/")
             XCTAssertEqual(feed?.links?.first?.attributes?.rel, "alternate")
             XCTAssertEqual(feed?.links?.first?.attributes?.type, "text/html")
             XCTAssertEqual(feed?.links?.first?.attributes?.hreflang, "en")
@@ -62,7 +62,7 @@ class AtomTests: BaseTestCase {
             
             XCTAssertNotNil(feed?.links?.last)
             XCTAssertNotNil(feed?.links?.last?.attributes)
-            XCTAssertEqual(feed?.links?.last?.attributes?.href, "http://example.org/feed.atom")
+            XCTAssertEqual(feed?.links?.last?.attributes?.href, "https://example.org/feed.atom")
             XCTAssertEqual(feed?.links?.last?.attributes?.rel, "self")
             XCTAssertEqual(feed?.links?.last?.attributes?.type, "application/atom+xml")
             XCTAssertEqual(feed?.links?.last?.attributes?.hreflang, "pt")
@@ -86,32 +86,32 @@ class AtomTests: BaseTestCase {
             XCTAssertNotNil(feed?.authors?.first)
             XCTAssertEqual(feed?.authors?.first?.name, "Pilgrim Mark")
             XCTAssertEqual(feed?.authors?.first?.email, "1234@example.com")
-            XCTAssertEqual(feed?.authors?.first?.uri, "http://example.org/")
+            XCTAssertEqual(feed?.authors?.first?.uri, "https://example.org/")
             
             XCTAssertNotNil(feed?.authors?.last)
             XCTAssertEqual(feed?.authors?.last?.name, "Mark the Pilgrim")
             XCTAssertEqual(feed?.authors?.last?.email, "5678@example.com")
-            XCTAssertEqual(feed?.authors?.last?.uri, "http://example.org/")
+            XCTAssertEqual(feed?.authors?.last?.uri, "https://example.org/")
             
             XCTAssertNotNil(feed?.contributors)
             XCTAssertEqual(feed?.contributors?.count, 2)
             
             XCTAssertEqual(feed?.contributors?.first?.name, "Jane Doe")
             XCTAssertEqual(feed?.contributors?.first?.email, "9101@example.com")
-            XCTAssertEqual(feed?.contributors?.first?.uri, "http://example.org/")
+            XCTAssertEqual(feed?.contributors?.first?.uri, "https://example.org/")
             
             XCTAssertEqual(feed?.contributors?.last?.name, "John Doe")
             XCTAssertEqual(feed?.contributors?.last?.email, "2345@example.com")
-            XCTAssertEqual(feed?.contributors?.last?.uri, "http://example.org/")
+            XCTAssertEqual(feed?.contributors?.last?.uri, "https://example.org/")
             
             XCTAssertEqual(feed?.id, "tag:example.org,2003:3")
             
             XCTAssertNotNil(feed?.generator)
             XCTAssertEqual(feed?.generator?.value, "Example Toolkit")
-            XCTAssertEqual(feed?.generator?.attributes?.uri, "http://www.example.com/")
+            XCTAssertEqual(feed?.generator?.attributes?.uri, "https://www.example.com/")
             XCTAssertEqual(feed?.generator?.attributes?.version, "1.0")
             
-            XCTAssertEqual(feed?.logo, "http://www.example.uk/logo.png")
+            XCTAssertEqual(feed?.logo, "https://www.example.uk/logo.png")
             XCTAssertEqual(feed?.rights, "Copyright (c) 2003, Mark Pilgrim")
             
             // Feed Entries
@@ -128,14 +128,14 @@ class AtomTests: BaseTestCase {
             XCTAssertNotNil(feed?.entries?.first?.links)
             XCTAssertEqual(feed?.entries?.first?.links?.count, 2)
             
-            XCTAssertEqual(feed?.entries?.first?.links?.first?.attributes?.href, "http://example.org/2005/04/02/atom")
+            XCTAssertEqual(feed?.entries?.first?.links?.first?.attributes?.href, "https://example.org/2005/04/02/atom")
             XCTAssertEqual(feed?.entries?.first?.links?.first?.attributes?.rel, "alternate")
             XCTAssertEqual(feed?.entries?.first?.links?.first?.attributes?.type, "text/html")
             XCTAssertEqual(feed?.entries?.first?.links?.first?.attributes?.hreflang, "en")
             XCTAssertEqual(feed?.entries?.first?.links?.first?.attributes?.title, "Human-readable information about the link")
             XCTAssertEqual(feed?.entries?.first?.links?.first?.attributes?.length, 1234)
             
-            XCTAssertEqual(feed?.entries?.first?.links?.last?.attributes?.href, "http://example.org/audio/ph34r_my_podcast.mp3")
+            XCTAssertEqual(feed?.entries?.first?.links?.last?.attributes?.href, "https://example.org/audio/ph34r_my_podcast.mp3")
             XCTAssertEqual(feed?.entries?.first?.links?.last?.attributes?.rel, "enclosure")
             XCTAssertEqual(feed?.entries?.first?.links?.last?.attributes?.type, "audio/mpeg")
             XCTAssertEqual(feed?.entries?.first?.links?.last?.attributes?.hreflang, "pt")
@@ -149,7 +149,7 @@ class AtomTests: BaseTestCase {
             XCTAssertEqual(feed?.entries?.first?.authors?.count, 1)
             
             XCTAssertEqual(feed?.entries?.first?.authors?.first?.name, "Mark Pilgrim")
-            XCTAssertEqual(feed?.entries?.first?.authors?.first?.uri, "http://example.org/")
+            XCTAssertEqual(feed?.entries?.first?.authors?.first?.uri, "https://example.org/")
             XCTAssertEqual(feed?.entries?.first?.authors?.first?.email, "f8dy@example.com")
             
             XCTAssertNotNil(feed?.entries?.first?.contributors)
@@ -157,17 +157,17 @@ class AtomTests: BaseTestCase {
             
             XCTAssertEqual(feed?.entries?.first?.contributors?.first?.name, "Sam Ruby")
             XCTAssertEqual(feed?.entries?.first?.contributors?.first?.email, "2345@example.com")
-            XCTAssertEqual(feed?.entries?.first?.contributors?.first?.uri, "http://example.org/")
+            XCTAssertEqual(feed?.entries?.first?.contributors?.first?.uri, "https://example.org/")
             
             XCTAssertEqual(feed?.entries?.first?.contributors?.last?.name, "Joe Gregorio")
             XCTAssertEqual(feed?.entries?.first?.contributors?.last?.email, "2345@example.com")
-            XCTAssertEqual(feed?.entries?.first?.contributors?.last?.uri, "http://example.org/")
+            XCTAssertEqual(feed?.entries?.first?.contributors?.last?.uri, "https://example.org/")
             
             XCTAssertNotNil(feed?.entries?.first?.content)
-            XCTAssertEqual(feed?.entries?.first?.content?.value, "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><i>[Update: The Atom draft is finished.]</i></p></div>")
+            XCTAssertEqual(feed?.entries?.first?.content?.value, "<div xmlns=\"https://www.w3.org/1999/xhtml\"><p><i>[Update: The Atom draft is finished.]</i></p></div>")
             XCTAssertNotNil(feed?.entries?.first?.content?.attributes)
             XCTAssertEqual(feed?.entries?.first?.content?.attributes?.type, "xhtml")
-            XCTAssertEqual(feed?.entries?.first?.content?.attributes?.src, "http://www.example.org/")
+            XCTAssertEqual(feed?.entries?.first?.content?.attributes?.src, "https://www.example.org/")
             
         } catch {
             XCTFail(error.localizedDescription)

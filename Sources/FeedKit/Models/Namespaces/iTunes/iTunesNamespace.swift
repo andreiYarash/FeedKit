@@ -171,7 +171,7 @@ public final class ITunesNamespace {
     /// podcast is located. This tag is only supported at a <channel>level 
     /// (podcast).
     ///
-    /// <itunes:new-feed-url>http://newlocation.com/example.rss</itunes:new-feed-url>
+    /// <itunes:new-feed-url>https://newlocation.com/example.rss</itunes:new-feed-url>
     /// Note: You should maintain your old feed until you have migrated your e
     /// xisting subscribers. For more information, see Update your RSS feed URL.
     public var iTunesNewFeedURL: String?

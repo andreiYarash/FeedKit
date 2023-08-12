@@ -46,7 +46,7 @@ import Foundation
 /// of /RPC2. The procedure to call is myCloud.rssPleaseNotify.
 /// 
 /// A full explanation of this element and the rssCloud interface is here:
-/// http://cyber.law.harvard.edu/rss/soapMeetsRss.html#rsscloudInterface
+/// https://cyber.law.harvard.edu/rss/soapMeetsRss.html#rsscloudInterface
 public final class RSSFeedCloud {
     
     /// The attributes of the `<channel>`'s `<cloud>` element.

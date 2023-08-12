@@ -34,7 +34,7 @@ import Foundation
 /// 
 /// The url must be an http url.
 /// 
-/// <enclosure url="http://www.scripting.com/mp3s/weatherReportSuite.mp3" 
+/// <enclosure url="https://www.scripting.com/mp3s/weatherReportSuite.mp3" 
 /// length="12216320" type="audio/mpeg" />
 public final class RSSFeedItemEnclosure {
     
@@ -43,7 +43,7 @@ public final class RSSFeedItemEnclosure {
         
         /// Where the enclosure is located.
         /// 
-        /// Example: http://www.scripting.com/mp3s/weatherReportSuite.mp3
+        /// Example: https://www.scripting.com/mp3s/weatherReportSuite.mp3
         public var url: String?
         
         /// How big the media object is in bytes.

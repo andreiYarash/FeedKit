@@ -1,22 +1,22 @@
-<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml">
+<rss version="2.0" xmlns:media="https://search.yahoo.com/mrss/" xmlns:georss="https://www.georss.org/georss" xmlns:gml="https://www.opengis.net/gml">
     <channel>
         <title>Song Site</title>
         <description>Media RSS example with new fields added in v1.5.0</description>
         <item>
-            <link>http://www.foo.com</link>
+            <link>https://www.foo.com</link>
             <pubDate>Mon, 27 Aug 2001 16:08:56 PST</pubDate>
-            <media:thumbnail url="http://www.foo.com/keyframe1.jpg" width="75" height="50" time="12:05:01.123" />
-            <media:thumbnail url="http://www.foo.com/keyframe2.jpg" width="640" height="480" time="12:05:01.123" />
+            <media:thumbnail url="https://www.foo.com/keyframe1.jpg" width="75" height="50" time="12:05:01.123" />
+            <media:thumbnail url="https://www.foo.com/keyframe2.jpg" width="640" height="480" time="12:05:01.123" />
             <media:group>
-                <media:content url="http://www.foo.com/song64kbps.mp3" fileSize="1000" bitrate="64" type="audio/mpeg" isDefault="true" expression="full" />
-                <media:content url="http://www.foo.com/song.wav" fileSize="16000" type="audio/x-wav" expression="full" />
+                <media:content url="https://www.foo.com/song64kbps.mp3" fileSize="1000" bitrate="64" type="audio/mpeg" isDefault="true" expression="full" />
+                <media:content url="https://www.foo.com/song.wav" fileSize="16000" type="audio/x-wav" expression="full" />
                 <media:credit role="producer" scheme="urn:ebu">entity name</media:credit>
                 <media:credit role="owner" scheme="urn:yvs">copyright holder of the entity</media:credit>
-                <media:category scheme="http://dmoz.org" label="Ace Ventura - Pet Detective">music/artist name/album/song</media:category>
+                <media:category scheme="https://dmoz.org" label="Ace Ventura - Pet Detective">music/artist name/album/song</media:category>
                 <media:rating scheme="urn:mpaa">nonadult</media:rating>
             </media:group>
             <media:content
-                url="http://www.foo.com/video.mov"
+                url="https://www.foo.com/video.mov"
                 fileSize="12216320"
                 type="video/quicktime"
                 medium="video"
@@ -32,18 +32,18 @@
                 lang="en">
             </media:content>
             <media:content
-                url="http://www.foo.com/movie.mov"
+                url="https://www.foo.com/movie.mov"
                 fileSize="12216320"
                 type="video/quicktime"
                 expression="full">
                 <media:title type="plain">The Judy's -- The Moo Song</media:title>
                 <media:description type="plain">This was some really bizarre band I listened to as a young lad.</media:description>
-                <media:thumbnail url="http://www.foo.com/keyframe.jpg" width="75" height="50" time="12:05:01.123" />
-                <media:player url="http://www.foo.com/player?id=1111" height="200" width="400" />
+                <media:thumbnail url="https://www.foo.com/keyframe.jpg" width="75" height="50" time="12:05:01.123" />
+                <media:player url="https://www.foo.com/player?id=1111" height="200" width="400" />
                 <media:hash algo="md5">dfdec888b72151965a34b4b59031290a</media:hash>
                 <media:credit role="producer">producer's name</media:credit>
                 <media:credit role="artist">artist's name</media:credit>
-                <media:category scheme="http://blah.com/scheme" label="blah">music/artistname/album/song</media:category>
+                <media:category scheme="https://blah.com/scheme" label="blah">music/artistname/album/song</media:category>
                 <media:text type="plain">
                     Oh, say, can you see, by the dawn's early light
                 </media:text>
@@ -64,26 +64,26 @@
                 <media:comment>comment1</media:comment>
                 <media:comment>comment2</media:comment>
             </media:comments>
-            <media:embed url="http://www.foo.com/player.swf" width="512" height="323">
+            <media:embed url="https://www.foo.com/player.swf" width="512" height="323">
                 <media:param name="type">application/x-shockwave-flash</media:param>
                 <media:param name="width">512</media:param>
                 <media:param name="height">323</media:param>
                 <media:param name="allowFullScreen">true</media:param>
-                <media:param name="flashVars">id=12345&amp;vid=678912i&amp;lang=en-us&amp;intl=us&amp;thumbUrl=http://www.foo.com/thumbnail.jpg</media:param>
+                <media:param name="flashVars">id=12345&amp;vid=678912i&amp;lang=en-us&amp;intl=us&amp;thumbUrl=https://www.foo.com/thumbnail.jpg</media:param>
             </media:embed>
             <media:responses>
-                <media:response>http://www.response1.com</media:response>
-                <media:response>http://www.response2.com</media:response>
+                <media:response>https://www.response1.com</media:response>
+                <media:response>https://www.response2.com</media:response>
             </media:responses>
             <media:backLinks>
-                <media:backLink>http://www.backlink1.com</media:backLink>
-                <media:backLink>http://www.backlink2.com</media:backLink>
+                <media:backLink>https://www.backlink1.com</media:backLink>
+                <media:backLink>https://www.backlink2.com</media:backLink>
             </media:backLinks>
-            <media:status state="blocked" reason="http://www.reasonforblocking.com" />
-            <media:price type="rent" price="19.99" currency="EUR" info="http://www.dummy.jp/package_info.html" />
-            <media:license type="text/html" href="http://www.licensehost.com/license">Sample license for a video</media:license>
-            <media:subTitle type="application/smil" lang="en-us" href="http://www.foo.org/subtitle.smil" />
-            <media:peerLink type="application/x-bittorrent" href="http://www.foo.org/sampleFile.torrent" />
+            <media:status state="blocked" reason="https://www.reasonforblocking.com" />
+            <media:price type="rent" price="19.99" currency="EUR" info="https://www.dummy.jp/package_info.html" />
+            <media:license type="text/html" href="https://www.licensehost.com/license">Sample license for a video</media:license>
+            <media:subTitle type="application/smil" lang="en-us" href="https://www.foo.org/subtitle.smil" />
+            <media:peerLink type="application/x-bittorrent" href="https://www.foo.org/sampleFile.torrent" />
             <media:location description="My house" start="00:01" end="01:00">
                 <georss:where>
                     <gml:Point>

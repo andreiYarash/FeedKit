@@ -15,7 +15,7 @@ Usage >> [`instructions`](https://github.com/nmdias/FeedKit/blob/master/README.m
 
 ### CocoaPods
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Swift and Objective-C Cocoa projects. You can install it with the following command:
+[CocoaPods](https://cocoapods.org) is a dependency manager for Swift and Objective-C Cocoa projects. You can install it with the following command:
 
 ```bash
 $ gem install cocoapods
@@ -49,7 +49,7 @@ $ pod install
 
 [Carthage](https://github.com/Carthage/Carthage) is a dependency manager that builds your dependencies and provides you with binary frameworks.
 
-To install Carthage with [Homebrew](http://brew.sh/) use the following command:
+To install Carthage with [Homebrew](https://brew.sh/) use the following command:
 
 ```bash
 $ brew update

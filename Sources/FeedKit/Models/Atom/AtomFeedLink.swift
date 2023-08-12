@@ -49,7 +49,7 @@ public final class AtomFeedLink {
         /// relation type equivalent to the same name registered within the IANA
         /// Registry of Link Relations (Section 7), and thus to the IRI that
         /// would be obtained by appending the value of the rel attribute to the
-        /// string "http://www.iana.org/assignments/relation/".  The value of
+        /// string "https://www.iana.org/assignments/relation/".  The value of
         /// "rel" describes the meaning of the link, but does not impose any
         /// behavioral requirements on Atom Processors.
         ///
@@ -64,10 +64,10 @@ public final class AtomFeedLink {
         /// href attribute identifies a resource related to the resource
         /// described by the containing element.  For example, the feed for a
         /// site that discusses the performance of the search engine at
-        /// "http://search.example.com" might contain, as a child of
+        /// "https://search.example.com" might contain, as a child of
         /// atom:feed:
         /// 
-        /// <link rel="related" href="http://search.example.com/"/>
+        /// <link rel="related" href="https://search.example.com/"/>
         /// 
         /// An identical link might appear as a child of any atom:entry whose
         /// content contains a discussion of that same search engine.

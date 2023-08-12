@@ -32,7 +32,7 @@ public final class RSSFeedCategory {
     public final class Attributes {
         
         /// A string that identifies a categorization taxonomy. It's an optional 
-        /// attribute of `<category>`. e.g. "http://www.fool.com/cusips"
+        /// attribute of `<category>`. e.g. "https://www.fool.com/cusips"
         public var domain: String?
         
     }

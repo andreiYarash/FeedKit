@@ -25,10 +25,10 @@
 import Foundation
 
 /// Optional element to specify the rights information of a media object.
-public class MediaRights {
+public final class MediaRights {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// Is the status of the media object saying whether a media object has 
         /// been created by the publisher or they have rights to circulate it. 

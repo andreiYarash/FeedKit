@@ -26,10 +26,10 @@ import Foundation
 
 /// This is the hash of the binary media file. It can appear multiple times as
 /// long as each instance is a different algo. It has one optional attribute.
-public class MediaHash {
+public final class MediaHash {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// This is the hash of the binary media file. It can appear multiple times as long as 
         /// each instance is a different algo. It has one optional attribute.

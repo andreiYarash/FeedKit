@@ -26,10 +26,10 @@ import Foundation
 
 /// Optional link to specify the machine-readable license associated with the
 /// content.
-public class MediaSubTitle {
+public final class MediaSubTitle {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// The type of the subtitle.
         public var type: String?

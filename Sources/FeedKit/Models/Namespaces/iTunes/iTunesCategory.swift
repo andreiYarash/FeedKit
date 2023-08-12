@@ -55,10 +55,10 @@ import Foundation
 /// <itunes:category text="Technology">
 ///    <itunes:category text="Gadgets" />
 /// </itunes:category>
-public class ITunesCategory {
+public final class ITunesCategory {
 
     /// The attributes of the element.
-    public class Attributes {
+    public final class Attributes {
         
         /// The primary iTunes Category.
         public var text: String?

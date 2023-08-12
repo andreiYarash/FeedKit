@@ -30,10 +30,10 @@ import Foundation
 /// elements be grouped by language and appear in time sequence order based on
 /// the start time. Elements can have overlapping start and end times. It has
 /// four optional attributes.
-public class MediaText {
+public final class MediaText {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// Specifies the type of text embedded. Possible values are either "plain"
         /// or "html". Default value is "plain". All HTML must be entity-encoded. 

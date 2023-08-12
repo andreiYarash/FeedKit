@@ -28,10 +28,10 @@ import Foundation
 /// console. This element is required only if a direct media url attribute is
 /// not specified in the <media:content> element. It has one required attribute
 /// and two optional attributes.
-public class MediaPlayer {
+public final class MediaPlayer {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// The URL of the player console that plays the media. It is a required attribute.
         public var url: String?

@@ -26,10 +26,10 @@ import Foundation
 
 /// Short description describing the media object typically a sentence in
 /// length. It has one optional attribute.
-public class MediaDescription {
+public final class MediaDescription {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// Specifies the type of text embedded. Possible values are either "plain" or "html". 
         /// Default value is "plain". All HTML must be entity-encoded. It is an optional attribute.

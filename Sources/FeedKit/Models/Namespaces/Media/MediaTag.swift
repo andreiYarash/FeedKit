@@ -29,7 +29,7 @@ import Foundation
 /// tag_name:weight format. It's up to the provider to choose the way weight is 
 /// determined for a tag; for example, number of occurrences can be one way to 
 /// decide weight of a particular tag. Default weight is 1.
-public class MediaTag {
+public final class MediaTag {
     
     /// The tag name.
     public var tag: String?

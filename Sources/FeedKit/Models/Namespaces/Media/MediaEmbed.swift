@@ -27,10 +27,10 @@ import Foundation
 /// Sometimes player-specific embed code is needed for a player to play any
 /// video. <media:embed> allows inclusion of such information in the form of
 /// key-value pairs.
-public class MediaEmbed {
+public final class MediaEmbed {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// The location of the embeded media.
         public var url: String?

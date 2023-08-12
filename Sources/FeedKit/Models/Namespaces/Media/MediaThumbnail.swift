@@ -28,10 +28,10 @@ import Foundation
 /// media object. If multiple thumbnails are included, and time coding is not
 /// at play, it is assumed that the images are in order of importance. It has
 /// one required attribute and three optional attributes.
-public class MediaThumbnail {
-    
+public final class MediaThumbnail {
+
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// Specifies the url of the thumbnail. It is a required attribute.
         public var url: String?

@@ -25,10 +25,10 @@
 import Foundation
 
 /// The title of the particular media object. It has one optional attribute.
-public class MediaTitle {
+public final class MediaTitle {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// Specifies the type of text embedded. Possible values are either "plain" or "html". 
         /// Default value is "plain". All HTML must be entity-encoded. It is an optional attribute.

@@ -27,10 +27,10 @@ import Foundation
 /// Optional element to specify geographical information about various
 /// locations captured in the content of a media object. The format conforms
 /// to geoRSS.
-public class MediaLocation {
-    
+public final class MediaLocation {
+
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// Description of the place whose location is being specified.
         public var description: String?

@@ -28,7 +28,7 @@ import Foundation
 /// resource description.
 /// 
 /// See https://tools.ietf.org/html/rfc5013
-public class DublinCoreNamespace {
+public final class DublinCoreNamespace {
     
     /// A name given to the resource.
     public var dcTitle: String?

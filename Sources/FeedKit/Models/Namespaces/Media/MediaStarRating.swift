@@ -26,10 +26,10 @@ import Foundation
 
 /// This element specifies the rating-related information about a media object.
 /// Valid attributes are average, count, min and max.
-public class MediaStarRating {
+public final class MediaStarRating {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// The star rating's average.
         public var average: Double?

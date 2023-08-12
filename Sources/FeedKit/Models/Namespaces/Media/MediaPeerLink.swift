@@ -25,10 +25,10 @@
 import Foundation
 
 /// Optional element for P2P link.
-public class MediaPeerLink {
+public final class MediaPeerLink {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// The peer link's type.
         public var type: String?

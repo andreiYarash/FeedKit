@@ -25,10 +25,10 @@
 import Foundation
 
 /// Key-Value pairs with additional parameters for the embedded Media.
-public class MediaParam {
-    
+public final class MediaParam {
+
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// The parameter's key name.
         public var name: String?

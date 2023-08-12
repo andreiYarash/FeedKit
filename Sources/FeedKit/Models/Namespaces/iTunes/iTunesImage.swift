@@ -49,10 +49,10 @@ import Foundation
 /// size of 3000 x 3000 pixels, in JPEG or PNG format, 72 dpi, with appropriate
 /// file extensions (.jpg, .png), and in the RGB colorspace. These requirements
 /// are different from the standard RSS image tag specifications.
-public class ITunesImage {
+public final class ITunesImage {
     
     /// The attributes of the element.
-    public class Attributes {
+    public final class Attributes {
         
         /// The image's url.
         public var href: String?

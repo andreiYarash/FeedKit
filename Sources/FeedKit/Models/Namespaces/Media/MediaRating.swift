@@ -27,10 +27,10 @@ import Foundation
 /// This allows the permissible audience to be declared. If this element is not 
 /// included, it assumes that no restrictions are necessary. It has one optional 
 /// attribute.
-public class MediaRating {
+public final class MediaRating {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// The URI that identifies the rating scheme. It is an optional attribute. 
         /// If this attribute is not included, the default scheme is urn:simple (adult | nonadult).

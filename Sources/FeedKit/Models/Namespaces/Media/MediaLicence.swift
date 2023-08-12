@@ -26,10 +26,10 @@ import Foundation
 
 /// Optional link to specify the machine-readable license associated with the
 /// content.
-public class MediaLicence {
+public final class MediaLicence {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// The licence type.
         public var type: String?

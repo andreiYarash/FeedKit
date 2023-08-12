@@ -25,10 +25,10 @@
 import Foundation
 
 /// Copyright information for the media object. It has one optional attribute.
-public class MediaCopyright {
+public final class MediaCopyright {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// The URL for a terms of use page or additional copyright information. 
         /// If the media is operating under a Creative Commons license, the 

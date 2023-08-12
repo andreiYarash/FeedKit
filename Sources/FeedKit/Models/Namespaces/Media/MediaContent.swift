@@ -30,8 +30,8 @@ import Foundation
 /// the order of presentation. While many of the attributes appear to be
 /// audio/video specific, this element can be used to publish any type of
 /// media. It contains 14 attributes, most of which are optional.
-public class MediaContent {
-    
+public final class MediaContent {
+
     /// The title of the particular media object. It has one optional attribute.
     public var mediaTitle: MediaTitle?
     
@@ -60,7 +60,7 @@ public class MediaContent {
     public var mediaCategory: MediaCategory?
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// Should specify the direct URL to the media object. If not included, 
         /// a <media:player> element must be specified.

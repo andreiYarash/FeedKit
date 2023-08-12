@@ -29,10 +29,10 @@ import Foundation
 /// object can have multiple instances of this tag for including different
 /// pricing structures. The presence of this tag would mean that media object
 /// is not free.
-public class MediaPrice {
+public final class MediaPrice {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// Valid values are "rent", "purchase", "package" or "subscription". If 
         /// nothing is specified, then the media is free.

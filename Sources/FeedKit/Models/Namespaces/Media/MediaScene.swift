@@ -30,7 +30,7 @@ import Foundation
 /// the optional sub-elements <sceneTitle>, <sceneDescription>,
 /// <sceneStartTime> and <sceneEndTime>, which contains title, description,
 /// start and end time of a particular scene in the media, respectively.
-public class MediaScene {
+public final class MediaScene {
     
     /// The scene's title.
     public var sceneTitle: String?

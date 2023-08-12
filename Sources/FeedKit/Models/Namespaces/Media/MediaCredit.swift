@@ -29,11 +29,11 @@ import Foundation
 /// entities can have multiple roles, and several entities can have the same
 /// role. These should appear as distinct <media:credit> elements. It has two
 /// optional attributes.
-public class MediaCredit {
-    
+public final class MediaCredit {
+
     /// The element's attributes.
-    public class Attributes {
-        
+    public final class Attributes {
+
         /// Specifies the role the entity played. Must be lowercase. It is an 
         /// optional attribute.
         public var role: String?

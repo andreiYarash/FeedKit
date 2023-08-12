@@ -30,7 +30,7 @@ import Foundation
 ///
 /// The <itunes:owner> tag information is for administrative communication about 
 /// the podcast and is not displayed on the iTunes Store.
-public class ITunesOwner {
+public final class ITunesOwner {
 
     /// The email address of the owner.
     public var email: String?

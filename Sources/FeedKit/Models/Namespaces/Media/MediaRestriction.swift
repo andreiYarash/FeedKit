@@ -34,10 +34,10 @@ import Foundation
 /// literals are reserved: "all", "none". These literals can only be used once.
 /// This element has one required attribute and one optional attribute (with
 /// strict requirements for its exclusion).
-public class MediaRestriction {
+public final class MediaRestriction {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// Indicates the type of relationship that the restriction represents 
         /// (allow | deny). In the example above, the media object should only be 

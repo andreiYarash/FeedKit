@@ -31,9 +31,9 @@ extension String {
     ///
     /// - Returns: A `Date` object, or nil if the conversion failed.
     func toPermissiveDate() -> Date? {
-        return RFC822DateFormatter().date(from: self) ??
-            (RFC3339DateFormatter().date(from: self) ??
-            ISO8601DateFormatter().date(from: self))
-}
-
+        return DateFormatter.sharedRFC822.date(from: self) ??
+            (DateFormatter.sharedRFC3339.date(from: self) ??
+             DateFormatter.sharedISO8601.date(from: self))
+    }
+    
 }

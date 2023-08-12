@@ -26,7 +26,7 @@ import Foundation
 
 /// Converts date and time textual representations within the ISO8601
 /// date specification into `Date` objects
-class ISO8601DateFormatter: DateFormatter {
+final class ISO8601DateFormatter: DateFormatter {
     
     let dateFormats = [
         "yyyy-MM-dd'T'HH:mm:ss.SSZZZZZ",

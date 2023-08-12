@@ -39,7 +39,7 @@ class JSONFeedParser: FeedParserProtocol {
     func parse() -> Result<Feed, ParserError> {
         do {
             let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .formatted(RFC3339DateFormatter())
+            decoder.dateDecodingStrategy = .formatted(DateFormatter.sharedRFC3339)
             let decoded = try decoder.decode(JSONFeed.self, from: data)
             return .success(.json(decoded))
         } catch {

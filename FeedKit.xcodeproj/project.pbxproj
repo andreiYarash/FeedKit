@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96486BD92A87E5D600D4E220 /* DateFormatter+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96486BD82A87E5D600D4E220 /* DateFormatter+Shared.swift */; };
+		96486BDA2A87E5D600D4E220 /* DateFormatter+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96486BD82A87E5D600D4E220 /* DateFormatter+Shared.swift */; };
+		96486BDB2A87E5D600D4E220 /* DateFormatter+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96486BD82A87E5D600D4E220 /* DateFormatter+Shared.swift */; };
+		96486BDC2A87E5D600D4E220 /* DateFormatter+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96486BD82A87E5D600D4E220 /* DateFormatter+Shared.swift */; };
 		A01F67A01D1692B20038910F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01F679C1D16922D0038910F /* ViewController.swift */; };
 		A01F67A11D16931A0038910F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01F67991D1691510038910F /* Main.storyboard */; };
 		A09AFB3A1EEFDFF40076ACC7 /* AtomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09AFB2E1EEFDFF40076ACC7 /* AtomTests.swift */; };
@@ -567,6 +571,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		96486BD82A87E5D600D4E220 /* DateFormatter+Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Shared.swift"; sourceTree = "<group>"; };
 		A01F679A1D1691510038910F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A01F679C1D16922D0038910F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A0370EB91CEF9D5A009583A3 /* FeedKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeedKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -915,9 +920,10 @@
 		A0F6B7C11F6E6E9600220625 /* Dates */ = {
 			isa = PBXGroup;
 			children = (
+				96486BD82A87E5D600D4E220 /* DateFormatter+Shared.swift */,
 				A0F6B7C31F6E6E9600220625 /* ISO8601DateFormatter.swift */,
-				A0F6B7C41F6E6E9600220625 /* RFC3339DateFormatter.swift */,
 				A0F6B7C51F6E6E9600220625 /* RFC822DateFormatter.swift */,
+				A0F6B7C41F6E6E9600220625 /* RFC3339DateFormatter.swift */,
 			);
 			path = Dates;
 			sourceTree = "<group>";
@@ -1649,6 +1655,7 @@
 				A0F6B8401F6E6EB800220625 /* AtomFeedEntrySource.swift in Sources */,
 				A0F6B8721F6E6EB800220625 /* RSSFeed + mapCharacters.swift in Sources */,
 				A0F6B84B1F6E6EB800220625 /* ContentNamespace.swift in Sources */,
+				96486BDC2A87E5D600D4E220 /* DateFormatter+Shared.swift in Sources */,
 				A0F6B83C1F6E6EB800220625 /* AtomFeedEntryCategory.swift in Sources */,
 				A0F6B8821F6E6EB800220625 /* FeedParserProtocol.swift in Sources */,
 				A0F6B8541F6E6EB800220625 /* MediaContent.swift in Sources */,
@@ -1844,6 +1851,7 @@
 				A0F6B8F81F6E6EBB00220625 /* AtomFeedEntrySource.swift in Sources */,
 				A0F6B92A1F6E6EBB00220625 /* RSSFeed + mapCharacters.swift in Sources */,
 				A0F6B9031F6E6EBB00220625 /* ContentNamespace.swift in Sources */,
+				96486BDA2A87E5D600D4E220 /* DateFormatter+Shared.swift in Sources */,
 				A0F6B8F41F6E6EBB00220625 /* AtomFeedEntryCategory.swift in Sources */,
 				A0F6B93A1F6E6EBB00220625 /* FeedParserProtocol.swift in Sources */,
 				A0F6B90C1F6E6EBB00220625 /* MediaContent.swift in Sources */,
@@ -1943,6 +1951,7 @@
 				A0F6B89C1F6E6EBA00220625 /* AtomFeedEntrySource.swift in Sources */,
 				A0F6B8CE1F6E6EBA00220625 /* RSSFeed + mapCharacters.swift in Sources */,
 				A0F6B8A71F6E6EBA00220625 /* ContentNamespace.swift in Sources */,
+				96486BDB2A87E5D600D4E220 /* DateFormatter+Shared.swift in Sources */,
 				A0F6B8981F6E6EBA00220625 /* AtomFeedEntryCategory.swift in Sources */,
 				A0F6B8DE1F6E6EBA00220625 /* FeedParserProtocol.swift in Sources */,
 				A0F6B8B01F6E6EBA00220625 /* MediaContent.swift in Sources */,
@@ -2042,6 +2051,7 @@
 				A0F6B9541F6E6EBB00220625 /* AtomFeedEntrySource.swift in Sources */,
 				A0F6B9861F6E6EBB00220625 /* RSSFeed + mapCharacters.swift in Sources */,
 				A0F6B95F1F6E6EBB00220625 /* ContentNamespace.swift in Sources */,
+				96486BD92A87E5D600D4E220 /* DateFormatter+Shared.swift in Sources */,
 				A0F6B9501F6E6EBB00220625 /* AtomFeedEntryCategory.swift in Sources */,
 				A0F6B9961F6E6EBB00220625 /* FeedParserProtocol.swift in Sources */,
 				A0F6B9681F6E6EBB00220625 /* MediaContent.swift in Sources */,

@@ -33,7 +33,7 @@ import Foundation
 /// elements of the containing atom:feed element are considered to apply
 /// to the entry if there are no atom:author elements in the locations
 /// described above.
-public class AtomFeedEntryAuthor {
+public final class AtomFeedEntryAuthor {
      
     /// The "atom:name" element's content conveys a human-readable name for
     /// the person.  The content of atom:name is Language-Sensitive.  Person

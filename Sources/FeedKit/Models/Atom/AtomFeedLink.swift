@@ -27,10 +27,10 @@ import Foundation
 /// The "atom:link" element defines a reference from an entry or feed to
 /// a Web resource.  This specification assigns no meaning to the content
 /// (if any) of this element.
-public class AtomFeedLink {
+public final class AtomFeedLink {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// The "href" attribute contains the link's IRI. atom:link elements MUST
         /// have an href attribute, whose value MUST be a IRI reference

@@ -26,10 +26,10 @@ import Foundation
 
 /// The "atom:content" element either contains or links to the content of
 /// the entry.  The content of atom:content is Language-Sensitive.
-public class AtomFeedEntryContent {
+public final class AtomFeedEntryContent {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// On the atom:content element, the value of the "type" attribute MAY be
         /// one of "text", "html", or "xhtml".  Failing that, it MUST conform to

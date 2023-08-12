@@ -26,7 +26,7 @@ import Foundation
 
 /// The "atom:contributor" element is a Person construct that indicates a
 /// person or other entity who contributed to the entry or feed.
-public class AtomFeedEntryContributor {
+public final class AtomFeedEntryContributor {
     
     /// The "atom:name" element's content conveys a human-readable name for
     /// the person.  The content of atom:name is Language-Sensitive.  Person

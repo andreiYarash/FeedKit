@@ -27,10 +27,10 @@ import Foundation
 /// The "atom:category" element conveys information about a category
 /// associated with an entry or feed.  This specification assigns no
 /// meaning to the content (if any) of this element.
-public class AtomFeedEntryCategory {
+public final class AtomFeedEntryCategory {
     
     /// The element's attributes
-    public class Attributes {
+    public final class Attributes {
         
         /// The "term" attribute is a string that identifies the category to
         /// which the entry or feed belongs.  Category elements MUST have a

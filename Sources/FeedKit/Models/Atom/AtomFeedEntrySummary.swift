@@ -32,10 +32,10 @@ import Foundation
 /// It is not advisable for the atom:summary element to duplicate
 /// atom:title or atom:content because Atom Processors might assume there
 /// is a useful summary when there is none.
-public class AtomFeedEntrySummary {
+public final class AtomFeedEntrySummary {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// Text constructs MAY have a "type" attribute.  When present, the value
         /// MUST be one of "text", "html", or "xhtml".  If the "type" attribute

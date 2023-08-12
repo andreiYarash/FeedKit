@@ -26,10 +26,10 @@ import Foundation
 
 /// The "atom:subtitle" element is a Text construct that conveys a human-
 /// readable description or subtitle for a feed.
-public class AtomFeedSubtitle {
+public final class AtomFeedSubtitle {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// Text constructs MAY have a "type" attribute.  When present, the value
         /// MUST be one of "text", "html", or "xhtml".  If the "type" attribute

@@ -31,20 +31,20 @@ import FoundationXML
 /// the parsing of RSS and Atom feeds. It is an `XMLParserDelegate` of
 /// itself.
 final class XMLFeedParser: NSObject, XMLParserDelegate, FeedParserProtocol {
-    
+
     /// The Feed Type currently being parsed. The Initial value of this variable
     /// is unknown until a recognizable element that matches a feed type is
     /// found.
-    var feedType: XMLFeedType?
-    
+    private var feedType: XMLFeedType?
+
     /// The RSS feed model.
-    var rssFeed: RSSFeed?
-    
+    private var rssFeed: RSSFeed?
+
     /// The Atom feed model.
-    var atomFeed: AtomFeed?
-    
+    private var atomFeed: AtomFeed?
+
     /// The XML Parser.
-    let xmlParser: XMLParser
+    private let xmlParser: XMLParser
     
     /// An XML Feed Parser, for rss and atom feeds.
     ///
@@ -78,8 +78,8 @@ final class XMLFeedParser: NSObject, XMLParserDelegate, FeedParserProtocol {
     func parse() -> Result<Feed, ParserError> {
         let _ = self.xmlParser.parse()
         
-        if let error = parsingError {
-            return .failure(.internalError(reason: error.localizedDescription))
+        if let parsingError {
+            return .failure(.internalError(reason: parsingError.localizedDescription))
         }
         
         guard let feedType = feedType else {
@@ -150,7 +150,7 @@ extension XMLFeedParser {
         self.currentXMLDOMPath = self.currentXMLDOMPath.appendingPathComponent(elementName)
         
         // Get the feed type from the element, if it hasn't been done yet.
-        guard let feedType = self.feedType else {
+        guard let feedType else {
             self.feedType = XMLFeedType(rawValue: elementName)
             return
         }

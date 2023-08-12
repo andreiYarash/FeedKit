@@ -30,7 +30,14 @@ import Foundation
 /// See: https://jsonfeed.org/version/1
 final class JSONFeedParser: FeedParserProtocol {
     
-    let data: Data
+    private static let decoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .formatted(DateFormatter.sharedRFC3339)
+        return decoder
+    }()
+
+    private let data: Data
     
     required public init(data: Data) {
         self.data = data
@@ -38,10 +45,7 @@ final class JSONFeedParser: FeedParserProtocol {
     
     func parse() -> Result<Feed, ParserError> {
         do {
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            decoder.dateDecodingStrategy = .formatted(DateFormatter.sharedRFC3339)
-            let decoded = try decoder.decode(JSONFeed.self, from: data)
+            let decoded = try Self.decoder.decode(JSONFeed.self, from: data)
             return .success(.json(decoded))
         } catch {
             return .failure(.internalError(reason: error.localizedDescription))
@@ -50,5 +54,5 @@ final class JSONFeedParser: FeedParserProtocol {
     }
 
     func stopParsing() {}
-    
+
 }

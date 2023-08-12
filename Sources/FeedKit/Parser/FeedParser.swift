@@ -84,16 +84,21 @@ public final class FeedParser {
             guard let feedDataType = FeedDataType(data: data) else {
                 return .failure(.feedNotFound)
             }
+            let parser: FeedParserProtocol
             switch feedDataType {
             case .json: parser = JSONFeedParser(data: data)
             case .xml:  parser = XMLFeedParser(data: data)
             }
-            return parser!.parse()
+            
+            self.parser = parser
+
+            return parser.parse()
         }
         
         if let xmlStream = xmlStream {
-            parser = XMLFeedParser(stream: xmlStream)
-            return parser!.parse()
+            let parser = XMLFeedParser(stream: xmlStream)
+            self.parser = parser
+            return parser.parse()
         }
         
         return .failure(.internalError(reason: "Fatal error. Unable to parse from the initialized state."))
@@ -124,8 +129,7 @@ public final class FeedParser {
     
     /// Stops parsing XML feeds.
     public func abortParsing() {
-        guard let xmlFeedParser = parser as? XMLFeedParser else { return }
-        xmlFeedParser.xmlParser.abortParsing()
+        parser?.stopParsing()
     }
     
 }

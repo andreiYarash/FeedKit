@@ -100,7 +100,11 @@ final class XMLFeedParser: NSObject, XMLParserDelegate, FeedParserProtocol {
         }
         
     }
-    
+
+    func stopParsing() {
+        xmlParser.abortParsing()
+    }
+
     /// Redirects characters found between XML elements to their proper model
     /// mappers based on the `currentXMLDOMPath`.
     ///

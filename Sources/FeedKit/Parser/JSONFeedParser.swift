@@ -48,5 +48,7 @@ final class JSONFeedParser: FeedParserProtocol {
         }
         
     }
+
+    func stopParsing() {}
     
 }

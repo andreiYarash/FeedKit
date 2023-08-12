@@ -26,6 +26,6 @@ import Foundation
 
 /// The protocol for Parsing handlers.
 protocol FeedParserProtocol {
-    init(data: Data)
     func parse() -> Result<Feed, ParserError>
+    func stopParsing()
 }

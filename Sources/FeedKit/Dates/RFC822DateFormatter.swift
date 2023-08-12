@@ -70,9 +70,10 @@ final class RFC822DateFormatter: DateFormatter {
         // handle these in full compliance with Unicode tr35-31. For example,
         // "Tues, 6 November 2007 12:00:00 GMT" is rejected because of the "Tues",
         // even though "Tues" is used as an example for EEE in tr35-31.
-        let trimRegEx = try! NSRegularExpression(pattern: "^[a-zA-Z]+, ([\\w :+-]+)$")
-        let trimmed = trimRegEx.stringByReplacingMatches(in: string, options: [],
-            range: NSMakeRange(0, string.count), withTemplate: "$1")
+        let trimRegEx = #/^[a-zA-Z]+, ([\w :+-]+)$/#
+        let trimmed = string.replacing(trimRegEx) { match in
+            match.output.1
+        }
         return attemptParsing(from: trimmed, formats: backupFormats)
     }
     

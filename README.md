@@ -22,11 +22,11 @@
 
 ## Requirements
 
-![xcode](https://img.shields.io/badge/xcode-11-lightgrey.svg)
-![ios](https://img.shields.io/badge/ios-10-lightgrey.svg)
-![tvos](https://img.shields.io/badge/tvos-10-lightgrey.svg)
-![watchos](https://img.shields.io/badge/watchos-3-lightgrey.svg)
-![mac os](https://img.shields.io/badge/mac%20os-10.12-lightgrey.svg)
+![xcode](https://img.shields.io/badge/xcode-14-lightgrey.svg)
+![ios](https://img.shields.io/badge/ios-16-lightgrey.svg)
+![tvos](https://img.shields.io/badge/tvos-16-lightgrey.svg)
+![watchos](https://img.shields.io/badge/watchos-9-lightgrey.svg)
+![mac os](https://img.shields.io/badge/mac%20os-13-lightgrey.svg)
 ![mac os](https://img.shields.io/badge/ubuntu-16.04-lightgrey.svg)
 
 Installation >> [`instructions`](https://github.com/nmdias/FeedKit/blob/master/INSTALL.md) <<

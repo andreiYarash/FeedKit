@@ -47,10 +47,10 @@ import Foundation
 /// 
 /// A full explanation of this element and the rssCloud interface is here:
 /// http://cyber.law.harvard.edu/rss/soapMeetsRss.html#rsscloudInterface
-public class RSSFeedCloud {
+public final class RSSFeedCloud {
     
     /// The attributes of the `<channel>`'s `<cloud>` element.
-    public class Attributes {
+    public final class Attributes {
         
         /// The domain to register notification to.
         public var domain: String?

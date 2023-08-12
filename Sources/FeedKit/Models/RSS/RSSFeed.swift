@@ -34,7 +34,7 @@ import Foundation
 /// 
 /// Subordinate to the <rss> element is a single <channel> element, which
 /// contains information about the channel (metadata) and its contents.
-public class RSSFeed {
+public final class RSSFeed {
 
     /// The name of the channel. It's how people refer to your service. If 
     /// you have an HTML website that contains the same information as your 

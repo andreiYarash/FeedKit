@@ -36,10 +36,10 @@ import Foundation
 /// 
 /// <enclosure url="http://www.scripting.com/mp3s/weatherReportSuite.mp3" 
 /// length="12216320" type="audio/mpeg" />
-public class RSSFeedItemEnclosure {
+public final class RSSFeedItemEnclosure {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// Where the enclosure is located.
         /// 

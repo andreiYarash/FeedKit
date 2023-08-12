@@ -50,10 +50,10 @@ import Foundation
 /// isPermaLink is optional, its default value is true. If its value is false,
 /// the guid may not be assumed to be a url, or a url to anything in
 /// particular.
-public class RSSFeedItemGUID {
+public final class RSSFeedItemGUID {
     
     /// The element's attributes.
-    public class Attributes {
+    public final class Attributes {
         
         /// If the guid element has an attribute named "isPermaLink" with a value of
         /// true, the reader may assume that it is a permalink to the item, that is,

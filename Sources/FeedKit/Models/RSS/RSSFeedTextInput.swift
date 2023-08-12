@@ -40,7 +40,7 @@ import Foundation
 /// The purpose of the <textInput> element is something of a mystery. You can
 /// use it to specify a search engine box. Or to allow a reader to provide
 /// feedback. Most aggregators ignore it.
-public class RSSFeedTextInput {
+public final class RSSFeedTextInput {
     
     /// The label of the Submit button in the text input area.
     public var title: String?

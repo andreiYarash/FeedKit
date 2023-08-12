@@ -43,11 +43,11 @@ import Foundation
 /// You may include as many category elements as you need to, for different
 /// domains, and to have an item cross-referenced in different parts of the
 /// same domain.
-public class RSSFeedItemCategory {
-    
+public final class RSSFeedItemCategory {
+
     /// The element's attributes.
-    public class Attributes {
-        
+    public final class Attributes {
+
         /// A string that identifies a categorization taxonomy. It's an optional 
         /// attribute of `<category>`.
         /// 

@@ -27,12 +27,12 @@ import FeedKit
 
 class MediaTests: BaseTestCase {
     
-    func testRSSMedia() {
-        
+    func testRSSMedia() throws {
+
         // Given
-        let URL = fileURL("RSSMedia", type: "xml")
-        let parser = FeedParser(url: URL)
-        
+        let data = try fileData(name: "RSSMedia", type: "xml")
+        let parser = FeedParser(data: data)
+
         do {
             // When
             let rssFeed = try parser.parse().get().rssFeed
@@ -252,15 +252,16 @@ class MediaTests: BaseTestCase {
         
     }
     
-    func testRSSMediaParsingPerformance() {
-        
+    func testRSSMediaParsingPerformance() throws {
+
+        let data = try fileData(name: "RSSMedia", type: "xml")
+
         self.measure {
             
             // Given
             let expectation = self.expectation(description: "RSS Media Parsing Performance")
-            let URL = self.fileURL("RSSMedia", type: "xml")
-            let parser = FeedParser(url: URL)
-            
+            let parser = FeedParser(data: data)
+
             // When
             parser.parseAsync { (result) in
                 
@@ -275,12 +276,12 @@ class MediaTests: BaseTestCase {
         
     }
     
-    func testAtomMedia() {
-        
+    func testAtomMedia() throws {
+
         // Given
-        let URL = fileURL("AtomMedia", type: "xml")
-        let parser = FeedParser(url: URL)
-        
+        let data = try fileData(name: "AtomMedia", type: "xml")
+        let parser = FeedParser(data: data)
+
         do {
             // When
             let media = try parser.parse().get().atomFeed?.entries?.first?.media
@@ -469,15 +470,16 @@ class MediaTests: BaseTestCase {
         
     }
     
-    func testAtomMediaParsingPerformance() {
-        
+    func testAtomMediaParsingPerformance() throws {
+
+        let data = try fileData(name: "AtomMedia", type: "xml")
+
         self.measure {
             
             // Given
             let expectation = self.expectation(description: "Atom Media Parsing Performance")
-            let URL = self.fileURL("AtomMedia", type: "xml")
-            let parser = FeedParser(url: URL)
-            
+            let parser = FeedParser(data: data)
+
             // When
             parser.parseAsync { (result) in
                 

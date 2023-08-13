@@ -25,27 +25,33 @@
 import UIKit
 import FeedKit
 
-let feedURL = URL(string: "https://images.apple.com/main/rss/hotnews/hotnews.rss")!
+final class FeedTableViewController: UITableViewController {
 
-class FeedTableViewController: UITableViewController {
-    
-    let parser = FeedParser(url: feedURL)
-    
-    var rssFeed: RSSFeed?
-        
+    private var rssFeed: RSSFeed?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Feed"
-        
-        // Parse asynchronously, not to block the UI.
-        parser.parseAsync { [weak self] (result) in
-            guard let self = self else { return }
+
+        let feedURL = URL(string: "https://images.apple.com/main/rss/hotnews/hotnews.rss")!
+        let task = URLSession.shared.dataTask(with: feedURL) { [weak self] data, response, error in
+            guard let data else {
+                if let error {
+                    print(error)
+                }
+
+                return
+            }
+
+            let parser = FeedParser(data: data)
+            let result = parser.parse()
+
             switch result {
             case .success(let feed):
                 // Grab the parsed feed directly as an optional rss, atom or json feed object
-                self.rssFeed = feed.rssFeed
-                
+                self?.rssFeed = feed.rssFeed
+
                 // Or alternatively...
                 //
                 // switch feed {
@@ -53,17 +59,17 @@ class FeedTableViewController: UITableViewController {
                 // case let .atom(feed): break
                 // case let .json(feed): break
                 // }
-                
+
                 // Then back to the Main thread to update the UI.
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    self?.tableView.reloadData()
                 }
-                
+
             case .failure(let error):
                 print(error)
             }
         }
-        
+        task.resume()
     }
     
 }

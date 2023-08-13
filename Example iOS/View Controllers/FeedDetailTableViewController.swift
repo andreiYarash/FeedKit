@@ -24,7 +24,7 @@
 
 import UIKit
 
-class FeedDetailTableViewController: UITableViewController {
+final class FeedDetailTableViewController: UITableViewController {
     
     fileprivate let text: String
     

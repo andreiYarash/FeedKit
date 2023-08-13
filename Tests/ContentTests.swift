@@ -27,12 +27,12 @@ import FeedKit
 
 class ContentTests: BaseTestCase {
     
-    func testContent() {
-        
+    func testContent() throws {
+
         // Given
-        let URL = fileURL("Content", type: "xml")
-        let parser = FeedParser(url: URL)
-        
+        let data = try fileData(name: "Content", type: "xml")
+        let parser = FeedParser(data: data)
+
         do {
             // When
             let feed = try parser.parse().get().rssFeed
@@ -50,15 +50,16 @@ class ContentTests: BaseTestCase {
         
     }
     
-    func testContentParsingPerformance() {
-        
+    func testContentParsingPerformance() throws {
+
+        let data = try self.fileData(name: "Content", type: "xml")
+
         self.measure {
             
             // Given
             let expectation = self.expectation(description: "Content Parsing Performance")
-            let URL = self.fileURL("Content", type: "xml")
-            let parser = FeedParser(url: URL)
-            
+            let parser = FeedParser(data: data)
+
             // When
             parser.parseAsync { (result) in
                 

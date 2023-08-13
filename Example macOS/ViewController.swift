@@ -27,45 +27,53 @@ import FeedKit
 
 let feedURL = URL(string: "https://images.apple.com/main/rss/hotnews/hotnews.rss")!
 
-class ViewController: NSViewController {
+final class ViewController: NSViewController {
 
     @IBOutlet weak var feedTableView: NSTableView!
     @IBOutlet weak var feedItemsTableView: NSTableView!
     @IBOutlet var textView: NSTextView!
     
-    var feed: RSSFeed?
+    private var feed: RSSFeed?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let parser = FeedParser(url: feedURL)
 
-        // Parse asynchronously, not to block the UI.
-        parser.parseAsync { [weak self] (result) in
-            guard let self = self else { return }
+        let feedURL = URL(string: "https://images.apple.com/main/rss/hotnews/hotnews.rss")!
+        let task = URLSession.shared.dataTask(with: feedURL) { [weak self] data, response, error in
+            guard let data else {
+                if let error {
+                    print(error)
+                }
+
+                return
+            }
+
+            let parser = FeedParser(data: data)
+            let result = parser.parse()
+
             switch result {
             case .success(let feed):
                 // Grab the parsed feed directly as an optional rss, atom or json feed object
-                self.feed = feed.rssFeed
-                
+                self?.feed = feed.rssFeed
+
                 // Or alternatively...
                 //
                 // switch feed {
-                // case .rss(let feed): break
-                // case .atom(let feed): break
-                // case .json(let feed): break
+                // case let .rss(feed): break
+                // case let .atom(feed): break
+                // case let .json(feed): break
                 // }
-                
+
                 // Then back to the Main thread to update the UI.
                 DispatchQueue.main.async {
-                    self.feedItemsTableView.reloadData()
+                    self?.feedItemsTableView.reloadData()
                 }
-                
+
             case .failure(let error):
                 print(error)
             }
         }
-        
+        task.resume()
     }
 
     // MARK: - Text View Helper

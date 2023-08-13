@@ -27,11 +27,11 @@ import XCTest
 
 class JSONTests: BaseTestCase {
     
-    func testJSONFeed() {
+    func testJSONFeed() throws {
         
         // Given
-        let URL = fileURL("feed", type: "json")
-        let parser = FeedParser(url: URL)
+        let data = try fileData(name: "feed", type: "json")
+        let parser = FeedParser(data: data)
         var jsonFeed = JSONFeed()
         
         jsonFeed.version = "https://jsonfeed.org/version/1"

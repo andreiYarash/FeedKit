@@ -27,12 +27,12 @@ import FeedKit
 
 class RSS2Tests: BaseTestCase {
     
-    func testRSS2Feed() {
-        
+    func testRSS2Feed() throws {
+
         // Given
-        let URL = fileURL("RSS2", type: "xml")
-        let parser = FeedParser(url: URL)
-        
+        let data = try fileData(name: "RSS2", type: "xml")
+        let parser = FeedParser(data: data)
+
         do {
             // When
             let feed = try parser.parse().get().rssFeed
@@ -107,12 +107,12 @@ class RSS2Tests: BaseTestCase {
         
     }
     
-    func testFeedItems() {
-        
+    func testFeedItems() throws {
+
         // Given
-        let URL = fileURL("RSS2", type: "xml")
-        let parser = FeedParser(url: URL)
-        
+        let data = try fileData(name: "RSS2", type: "xml")
+        let parser = FeedParser(data: data)
+
         // When
         do {
             
@@ -202,15 +202,16 @@ class RSS2Tests: BaseTestCase {
         
     }
     
-    func testRSS2FeedParsingPerformance() {
+    func testRSS2FeedParsingPerformance() throws {
+
+        let data = try fileData(name: "RSS2", type: "xml")
 
         self.measure {
             
             // Given
             let expectation = self.expectation(description: "RSS2 Parsing Performance")
-            let URL = self.fileURL("RSS2", type: "xml")
-            let parser = FeedParser(url: URL)
-            
+            let parser = FeedParser(data: data)
+
             // When
             parser.parseAsync { (result) in
                 

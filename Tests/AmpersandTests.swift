@@ -27,11 +27,10 @@ class AmpersandTests: BaseTestCase {
     
     var document: Data?
     
-    override func setUp() {
-        let url = fileURL("Ampersand", type: "xml")
-        document = try? Data(contentsOf: url)
+    override func setUpWithError() throws {
+        document = try fileData(name: "Ampersand", type: "xml")
     }
-    
+
     func testUnquotedAmpersands() {
         if let document = document {
             let parser = FeedParser(data: document)

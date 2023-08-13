@@ -27,11 +27,12 @@ import XCTest
 class BaseTestCase: XCTestCase {
     
     let timeout: TimeInterval = 10.0
-    
-    func fileURL(_ name: String, type: String) -> URL {
+
+    func fileData(name: String, type: String) throws -> Data {
         let bundle = Bundle(for: Swift.type(of: self))
         let filePath = bundle.path(forResource: name, ofType: type)!
-        return URL(fileURLWithPath: filePath)
+        let url = URL(fileURLWithPath: filePath)
+        return try Data(contentsOf: url)
     }
-    
+
 }

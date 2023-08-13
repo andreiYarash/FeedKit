@@ -27,11 +27,11 @@ import FeedKit
 
 class SyndicationTests: BaseTestCase {
     
-    func testSyndication() {
+    func testSyndication() throws {
 
         // Given
-        let URL = fileURL("Syndication", type: "xml")
-        let parser = FeedParser(url: URL)
+        let data = try fileData(name: "Syndication", type: "xml")
+        let parser = FeedParser(data: data)
 
         do {
             // When
@@ -49,15 +49,16 @@ class SyndicationTests: BaseTestCase {
         
     }
     
-    func testSyndicationParsingPerformance() {
-        
+    func testSyndicationParsingPerformance() throws {
+
+        let data = try fileData(name: "Syndication", type: "xml")
+
         self.measure {
             
             // Given
             let expectation = self.expectation(description: "Syndication Parsing Performance")
-            let URL = self.fileURL("Syndication", type: "xml")
-            let parser = FeedParser(url: URL)
-            
+            let parser = FeedParser(data: data)
+
             // When
             parser.parseAsync { (result) in
                 

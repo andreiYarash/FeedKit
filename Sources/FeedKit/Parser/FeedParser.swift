@@ -30,27 +30,23 @@ import FoundationNetworking
 
 /// An RSS and Atom feed parser. `FeedParser` uses `Foundation`'s `XMLParser`.
 public final class FeedParser {
-    
-    private var data: Data?
-    private var url: URL?
-    private var xmlStream: InputStream?
-    
-    /// A FeedParser handler provider.
-    var parser: FeedParserProtocol?
-   
-    /// Initializes the parser with the JSON or XML content referenced by the given URL.
-    ///
-    /// - Parameter url: URL whose contents are read to produce the feed data
-    public init(url: URL) {
-        self.url = url
+
+    private let dataSource: DataSource
+
+    private enum DataSource {
+        case data(Data)
+        case xmlStream(InputStream)
     }
     
+    /// A FeedParser handler provider.
+    private var parser: FeedParserProtocol?
+
     /// Initializes the parser with the xml or json contents encapsulated in a 
     /// given data object.
     ///
     /// - Parameter data: XML or JSON data
     public init(data: Data) {
-        self.data = data
+        self.dataSource = .data(data)
     }
     
     /// Initializes the parser with the XML contents encapsulated in a
@@ -58,7 +54,7 @@ public final class FeedParser {
     ///
     /// - Parameter xmlStream: An InputStream that yields XML data.
     public init(xmlStream: InputStream) {
-        self.xmlStream = xmlStream
+        self.dataSource = .xmlStream(xmlStream)
     }
     
     /// Starts parsing the feed.
@@ -66,42 +62,26 @@ public final class FeedParser {
     /// - Returns: The parsed `Result`.
     public func parse() -> Result<Feed, ParserError> {
         
-        if let url = url {
-            // The `Data(contentsOf:)` initializer doesn't handle the `feed` URI scheme. As such,
-            // it's sanitized first, in case it's in fact a `feed` scheme.
-            guard let sanitizedSchemeUrl = url.replacing(scheme: "feed", with: "https") else {
-                return .failure(.internalError(reason: "Failed url sanitizing."))
-            }
+        let parser: FeedParserProtocol
 
-            do {
-                data = try Data(contentsOf: sanitizedSchemeUrl)
-            } catch {
-                return .failure(.internalError(reason: error.localizedDescription))
-            }
-        }
-        
-        if let data = data {
+        switch dataSource {
+        case .data(let data):
             guard let feedDataType = FeedDataType(data: data) else {
                 return .failure(.feedNotFound)
             }
-            let parser: FeedParserProtocol
+
             switch feedDataType {
             case .json: parser = JSONFeedParser(data: data)
             case .xml:  parser = XMLFeedParser(data: data)
             }
-            
-            self.parser = parser
 
-            return parser.parse()
+        case let .xmlStream(xmlStream):
+            parser = XMLFeedParser(stream: xmlStream)
         }
-        
-        if let xmlStream = xmlStream {
-            let parser = XMLFeedParser(stream: xmlStream)
-            self.parser = parser
-            return parser.parse()
-        }
-        
-        return .failure(.internalError(reason: "Fatal error. Unable to parse from the initialized state."))
+
+        self.parser = parser
+
+        return parser.parse()
         
     }
     

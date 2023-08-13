@@ -27,12 +27,12 @@ import XCTest
 
 class ParserErrorTests: BaseTestCase {
     
-    func testParserResult() {
-        
+    func testParserResult() throws {
+
         // Given
-        let URL = fileURL("FeedNotFound", type: "xml")
-        let parser = FeedParser(url: URL)
-        
+        let data = try fileData(name: "FeedNotFound", type: "xml")
+        let parser = FeedParser(data: data)
+
         // When
         let result = parser.parse()
         

@@ -27,12 +27,12 @@ import FeedKit
 
 class DublinCoreTests: BaseTestCase {
     
-    func testRSSDublinCore() {
-        
+    func testRSSDublinCore() throws {
+
         // Given
-        let URL = fileURL("RSSDC", type: "xml")
-        let parser = FeedParser(url: URL)
-        
+        let data = try fileData(name: "RSSDC", type: "xml")
+        let parser = FeedParser(data: data)
+
         do {
             // When
             let feed = try parser.parse().get().rssFeed
@@ -82,15 +82,16 @@ class DublinCoreTests: BaseTestCase {
         
     }
     
-    func testRssDublinCoreParsingPerformance() {
-        
+    func testRssDublinCoreParsingPerformance() throws {
+
+        let data = try fileData(name: "RSSDC", type: "xml")
+
         self.measure {
             
             // Given
             let expectation = self.expectation(description: "Dublin Core Parsing Performance")
-            let URL = self.fileURL("RSSDC", type: "xml")
-            let parser = FeedParser(url: URL)
-            
+            let parser = FeedParser(data: data)
+
             // When
             parser.parseAsync{ (result) in
                 
@@ -105,12 +106,12 @@ class DublinCoreTests: BaseTestCase {
         
     }
  
-    func testRDFDublinCore() {
-        
+    func testRDFDublinCore() throws {
+
         // Given
-        let URL = fileURL("RDFDC", type: "xml")
-        let parser = FeedParser(url: URL)
-        
+        let data = try fileData(name: "RDFDC", type: "xml")
+        let parser = FeedParser(data: data)
+
         do {
             // When
             let feed = try parser.parse().get().rssFeed
@@ -160,15 +161,16 @@ class DublinCoreTests: BaseTestCase {
         
     }
     
-    func testRDFDublinCoreParsingPerformance() {
-        
+    func testRDFDublinCoreParsingPerformance() throws {
+
+        let data = try fileData(name: "RDFDC", type: "xml")
+
         self.measure {
             
             // Given
             let expectation = self.expectation(description: "Dublin Core Parsing Performance")
-            let URL = self.fileURL("RDFDC", type: "xml")
-            let parser = FeedParser(url: URL)
-            
+            let parser = FeedParser(data: data)
+
             // When
             parser.parseAsync{ (result) in
                 

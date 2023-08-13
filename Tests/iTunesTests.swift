@@ -27,11 +27,11 @@ import FeedKit
 
 class iTunesTests: BaseTestCase {
 
-    func testITunesFeed() {
-        
+    func testITunesFeed() throws {
+
         //Given
-        let URL = fileURL("iTunesPodcasting", type: "xml")
-        let parser = FeedParser(url: URL)
+        let data = try fileData(name: "iTunesPodcasting", type: "xml")
+        let parser = FeedParser(data: data)
 
         do {
             // When
@@ -64,11 +64,11 @@ class iTunesTests: BaseTestCase {
 
     }
 
-    func testITunesFeedItems() {
-        
+    func testITunesFeedItems() throws {
+
         //Given
-        let URL = fileURL("iTunesPodcasting", type: "xml")
-        let parser = FeedParser(url: URL)
+        let data = try fileData(name: "iTunesPodcasting", type: "xml")
+        let parser = FeedParser(data: data)
 
         do {
             // When

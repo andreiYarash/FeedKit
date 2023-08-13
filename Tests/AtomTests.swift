@@ -27,12 +27,12 @@ import FeedKit
 
 class AtomTests: BaseTestCase {
     
-    func testAtomFeed() {
-        
+    func testAtomFeed() throws {
+
         // Given
-        let URL = fileURL("Atom", type: "xml")
-        let parser = FeedParser(url: URL)
-        
+        let data = try fileData(name: "Atom", type: "xml")
+        let parser = FeedParser(data: data)
+
         do {
             // When
             let feed = try parser.parse().get().atomFeed
@@ -178,15 +178,16 @@ class AtomTests: BaseTestCase {
         
     }
     
-    func testAtomFeedParsingPerformance() {
+    func testAtomFeedParsingPerformance() throws {
         
+        let data = try fileData(name: "Atom", type: "xml")
+
         self.measure {
             
             // Given
             let expectation = self.expectation(description: "Atom Parsing Performance")
-            let URL = self.fileURL("Atom", type: "xml")
-            let parser = FeedParser(url: URL)
-            
+            let parser = FeedParser(data: data)
+
             // When
             parser.parseAsync { (result) in
                 

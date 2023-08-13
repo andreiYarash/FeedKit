@@ -27,12 +27,12 @@ import FeedKit
 
 class RDFTests: BaseTestCase {
     
-    func testRDFFeed() {
-        
+    func testRDFFeed() throws {
+
         // Given
-        let URL = fileURL("RDF", type: "xml")
-        let parser = FeedParser(url: URL)
-        
+        let data = try fileData(name: "RDF", type: "xml")
+        let parser = FeedParser(data: data)
+
         do {
             // When
             let feed = try parser.parse().get().rssFeed
@@ -63,15 +63,16 @@ class RDFTests: BaseTestCase {
         
     }
     
-    func testRDFFeedParsingPerformance() {
-        
+    func testRDFFeedParsingPerformance() throws {
+
+        let data = try fileData(name: "RDF", type: "xml")
+
         self.measure {
             
             // Given
             let expectation = self.expectation(description: "RDF Parsing Performance")
-            let URL = self.fileURL("RDF", type: "xml")
-            let parser = FeedParser(url: URL)
-            
+            let parser = FeedParser(data: data)
+
             // When
             parser.parseAsync { (result) in
                 

@@ -13,11 +13,14 @@ let package = Package(
     products: [
         .library(name: "FeedKit", targets: ["FeedKit"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/pointfreeco/swift-custom-dump", from: "1.0.0")
+    ],
     targets: [
         .target(name: "FeedKit", dependencies: []),
         .testTarget(
             name: "Tests",
-            dependencies: ["FeedKit"],
+            dependencies: ["FeedKit", .product(name: "CustomDump", package: "swift-custom-dump")],
             path: "Tests",
             resources: [
                 .copy("json"),

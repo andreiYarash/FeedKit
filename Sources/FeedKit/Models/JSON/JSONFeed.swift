@@ -115,11 +115,11 @@ extension JSONFeed: Decodable {
     enum CodingKeys: String, CodingKey {
         case version
         case title
-        case user_comment
-        case home_page_url
+        case userComment
+        case homePageUrl
         case description
-        case feed_url
-        case next_url
+        case feedUrl
+        case nextUrl
         case icon
         case favicon
         case expired
@@ -132,11 +132,11 @@ extension JSONFeed: Decodable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         version = try values.decodeIfPresent(String.self, forKey: .version)
         title = try values.decodeIfPresent(String.self, forKey: .title)
-        userComment = try values.decodeIfPresent(String.self, forKey: .user_comment)
-        homePageURL = try values.decodeIfPresent(String.self, forKey: .home_page_url)
+        userComment = try values.decodeIfPresent(String.self, forKey: .userComment)
+        homePageURL = try values.decodeIfPresent(String.self, forKey: .homePageUrl)
         description = try values.decodeIfPresent(String.self, forKey: .description)
-        feedUrl = try values.decodeIfPresent(String.self, forKey: .feed_url)
-        nextUrl = try values.decodeIfPresent(String.self, forKey: .next_url)
+        feedUrl = try values.decodeIfPresent(String.self, forKey: .feedUrl)
+        nextUrl = try values.decodeIfPresent(String.self, forKey: .nextUrl)
         icon = try values.decodeIfPresent(String.self, forKey: .icon)
         favicon = try values.decodeIfPresent(String.self, forKey: .favicon)
         expired = try values.decodeIfPresent(Bool.self, forKey: .expired)

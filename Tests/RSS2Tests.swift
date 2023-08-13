@@ -30,7 +30,7 @@ class RSS2Tests: BaseTestCase {
     func testRSS2Feed() throws {
 
         // Given
-        let data = try fileData(name: "RSS2", type: "xml")
+        let data = try fileData(name: "RSS2", type: "xml", directory: "xml")
         let parser = FeedParser(data: data)
 
         do {
@@ -110,7 +110,7 @@ class RSS2Tests: BaseTestCase {
     func testFeedItems() throws {
 
         // Given
-        let data = try fileData(name: "RSS2", type: "xml")
+        let data = try fileData(name: "RSS2", type: "xml", directory: "xml")
         let parser = FeedParser(data: data)
 
         // When
@@ -204,7 +204,7 @@ class RSS2Tests: BaseTestCase {
     
     func testRSS2FeedParsingPerformance() throws {
 
-        let data = try fileData(name: "RSS2", type: "xml")
+        let data = try fileData(name: "RSS2", type: "xml", directory: "xml")
 
         self.measure {
             

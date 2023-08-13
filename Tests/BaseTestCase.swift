@@ -26,11 +26,17 @@ import XCTest
 
 class BaseTestCase: XCTestCase {
     
-    let timeout: TimeInterval = 10.0
+    let timeout: TimeInterval = 5.0
 
-    func fileData(name: String, type: String) throws -> Data {
-        let bundle = Bundle(for: Swift.type(of: self))
-        let filePath = bundle.path(forResource: name, ofType: type)!
+    func fileData(name: String, type: String, directory: String) throws -> Data {
+        let filePath: String
+        
+        #if SWIFT_PACKAGE
+        filePath = Bundle.module.path(forResource: name, ofType: type, inDirectory: directory)!
+        #else
+        Bundle(for: Swift.type(of: self)).path(forResource: name, ofType: type)!
+        #endif
+
         let url = URL(fileURLWithPath: filePath)
         return try Data(contentsOf: url)
     }

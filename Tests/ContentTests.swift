@@ -30,7 +30,7 @@ class ContentTests: BaseTestCase {
     func testContent() throws {
 
         // Given
-        let data = try fileData(name: "Content", type: "xml")
+        let data = try fileData(name: "Content", type: "xml", directory: "xml")
         let parser = FeedParser(data: data)
 
         do {
@@ -52,7 +52,7 @@ class ContentTests: BaseTestCase {
     
     func testContentParsingPerformance() throws {
 
-        let data = try self.fileData(name: "Content", type: "xml")
+        let data = try self.fileData(name: "Content", type: "xml", directory: "xml")
 
         self.measure {
             

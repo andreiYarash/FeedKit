@@ -30,7 +30,7 @@ class AtomTests: BaseTestCase {
     func testAtomFeed() throws {
 
         // Given
-        let data = try fileData(name: "Atom", type: "xml")
+        let data = try fileData(name: "Atom", type: "xml", directory: "xml")
         let parser = FeedParser(data: data)
 
         do {
@@ -180,7 +180,7 @@ class AtomTests: BaseTestCase {
     
     func testAtomFeedParsingPerformance() throws {
         
-        let data = try fileData(name: "Atom", type: "xml")
+        let data = try fileData(name: "Atom", type: "xml", directory: "xml")
 
         self.measure {
             

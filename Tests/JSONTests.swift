@@ -22,6 +22,7 @@
 //  SOFTWARE.
 //
 
+import CustomDump
 import XCTest
 @testable import FeedKit
 
@@ -30,7 +31,7 @@ class JSONTests: BaseTestCase {
     func testJSONFeed() throws {
         
         // Given
-        let data = try fileData(name: "feed", type: "json")
+        let data = try fileData(name: "feed", type: "json", directory: "json")
         let parser = FeedParser(data: data)
         var jsonFeed = JSONFeed()
         
@@ -121,7 +122,7 @@ class JSONTests: BaseTestCase {
             let parsedJsonFeed = try parser.parse().get().jsonFeed
 
             // Then
-            XCTAssertEqual(parsedJsonFeed, jsonFeed)
+            XCTAssertNoDifference(parsedJsonFeed, jsonFeed)
             
         } catch {
             XCTFail(error.localizedDescription)

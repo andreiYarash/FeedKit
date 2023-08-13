@@ -30,7 +30,7 @@ class RDFTests: BaseTestCase {
     func testRDFFeed() throws {
 
         // Given
-        let data = try fileData(name: "RDF", type: "xml")
+        let data = try fileData(name: "RDF", type: "xml", directory: "xml")
         let parser = FeedParser(data: data)
 
         do {
@@ -65,7 +65,7 @@ class RDFTests: BaseTestCase {
     
     func testRDFFeedParsingPerformance() throws {
 
-        let data = try fileData(name: "RDF", type: "xml")
+        let data = try fileData(name: "RDF", type: "xml", directory: "xml")
 
         self.measure {
             

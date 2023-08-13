@@ -30,7 +30,7 @@ class MediaTests: BaseTestCase {
     func testRSSMedia() throws {
 
         // Given
-        let data = try fileData(name: "RSSMedia", type: "xml")
+        let data = try fileData(name: "RSSMedia", type: "xml", directory: "xml")
         let parser = FeedParser(data: data)
 
         do {
@@ -254,7 +254,7 @@ class MediaTests: BaseTestCase {
     
     func testRSSMediaParsingPerformance() throws {
 
-        let data = try fileData(name: "RSSMedia", type: "xml")
+        let data = try fileData(name: "RSSMedia", type: "xml", directory: "xml")
 
         self.measure {
             
@@ -279,7 +279,7 @@ class MediaTests: BaseTestCase {
     func testAtomMedia() throws {
 
         // Given
-        let data = try fileData(name: "AtomMedia", type: "xml")
+        let data = try fileData(name: "AtomMedia", type: "xml", directory: "xml")
         let parser = FeedParser(data: data)
 
         do {
@@ -472,7 +472,7 @@ class MediaTests: BaseTestCase {
     
     func testAtomMediaParsingPerformance() throws {
 
-        let data = try fileData(name: "AtomMedia", type: "xml")
+        let data = try fileData(name: "AtomMedia", type: "xml", directory: "xml")
 
         self.measure {
             

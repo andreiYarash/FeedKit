@@ -30,7 +30,7 @@ class SyndicationTests: BaseTestCase {
     func testSyndication() throws {
 
         // Given
-        let data = try fileData(name: "Syndication", type: "xml")
+        let data = try fileData(name: "Syndication", type: "xml", directory: "xml")
         let parser = FeedParser(data: data)
 
         do {
@@ -51,7 +51,7 @@ class SyndicationTests: BaseTestCase {
     
     func testSyndicationParsingPerformance() throws {
 
-        let data = try fileData(name: "Syndication", type: "xml")
+        let data = try fileData(name: "Syndication", type: "xml", directory: "xml")
 
         self.measure {
             

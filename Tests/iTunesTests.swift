@@ -30,7 +30,7 @@ class iTunesTests: BaseTestCase {
     func testITunesFeed() throws {
 
         //Given
-        let data = try fileData(name: "iTunesPodcasting", type: "xml")
+        let data = try fileData(name: "iTunesPodcasting", type: "xml", directory: "xml")
         let parser = FeedParser(data: data)
 
         do {
@@ -67,7 +67,7 @@ class iTunesTests: BaseTestCase {
     func testITunesFeedItems() throws {
 
         //Given
-        let data = try fileData(name: "iTunesPodcasting", type: "xml")
+        let data = try fileData(name: "iTunesPodcasting", type: "xml", directory: "xml")
         let parser = FeedParser(data: data)
 
         do {

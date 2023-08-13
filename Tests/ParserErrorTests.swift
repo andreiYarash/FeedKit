@@ -30,7 +30,7 @@ class ParserErrorTests: BaseTestCase {
     func testParserResult() throws {
 
         // Given
-        let data = try fileData(name: "FeedNotFound", type: "xml")
+        let data = try fileData(name: "FeedNotFound", type: "xml", directory: "xml")
         let parser = FeedParser(data: data)
 
         // When

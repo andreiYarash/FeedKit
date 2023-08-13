@@ -28,7 +28,7 @@ class AmpersandTests: BaseTestCase {
     var document: Data?
     
     override func setUpWithError() throws {
-        document = try fileData(name: "Ampersand", type: "xml")
+        document = try fileData(name: "Ampersand", type: "xml", directory: "xml")
     }
 
     func testUnquotedAmpersands() {

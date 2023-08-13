@@ -30,7 +30,7 @@ class DublinCoreTests: BaseTestCase {
     func testRSSDublinCore() throws {
 
         // Given
-        let data = try fileData(name: "RSSDC", type: "xml")
+        let data = try fileData(name: "RSSDC", type: "xml", directory: "xml")
         let parser = FeedParser(data: data)
 
         do {
@@ -84,7 +84,7 @@ class DublinCoreTests: BaseTestCase {
     
     func testRssDublinCoreParsingPerformance() throws {
 
-        let data = try fileData(name: "RSSDC", type: "xml")
+        let data = try fileData(name: "RSSDC", type: "xml", directory: "xml")
 
         self.measure {
             
@@ -109,7 +109,7 @@ class DublinCoreTests: BaseTestCase {
     func testRDFDublinCore() throws {
 
         // Given
-        let data = try fileData(name: "RDFDC", type: "xml")
+        let data = try fileData(name: "RDFDC", type: "xml", directory: "xml")
         let parser = FeedParser(data: data)
 
         do {
@@ -163,7 +163,7 @@ class DublinCoreTests: BaseTestCase {
     
     func testRDFDublinCoreParsingPerformance() throws {
 
-        let data = try fileData(name: "RDFDC", type: "xml")
+        let data = try fileData(name: "RDFDC", type: "xml", directory: "xml")
 
         self.measure {
             

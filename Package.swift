@@ -15,6 +15,14 @@ let package = Package(
     ],
     targets: [
         .target(name: "FeedKit", dependencies: []),
-        .testTarget(name: "Tests", dependencies: ["FeedKit"], path: "Tests")
+        .testTarget(
+            name: "Tests",
+            dependencies: ["FeedKit"],
+            path: "Tests",
+            resources: [
+                .copy("json"),
+                .copy("xml")
+            ]
+        )
     ]
 )

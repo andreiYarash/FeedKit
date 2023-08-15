@@ -26,7 +26,7 @@ import XCTest
 import FeedKit
 
 class AtomTests: BaseTestCase {
-    
+
     func testAtomFeed() throws {
 
         // Given
@@ -177,7 +177,37 @@ class AtomTests: BaseTestCase {
         
         
     }
-    
+
+    func testAtomMultipleNamesOneAuthor() throws {
+        let rawFeed = """
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+          <title>Lorem ipsum</title>
+          <entry>
+            <published>2023-08-15T09:00:00-04:00</published>
+            <updated>2023-08-15T09:00:00-04:00</updated>
+            <title>Something something something</title>
+            <content type="html">Content goes here</content>
+            <author>
+              <name>Author A</name>
+              <name>Another Author</name>
+              <name>Jane Doe</name>
+              <name>John Doe</name>
+            </author>
+          </entry>
+        </feed>
+        """
+        let data = Data(rawFeed.utf8)
+        let parser = FeedParser(data: data)
+
+        let feed = try parser.parse().get()
+        let atomFeed = try XCTUnwrap(feed.atomFeed)
+
+        let item = try XCTUnwrap(atomFeed.entries?.first)
+        let authors = try XCTUnwrap(item.authors)
+        XCTAssertEqual(authors.count, 4)
+    }
+
     func testAtomFeedParsingPerformance() throws {
         
         let data = try fileData(name: "Atom", type: "xml", directory: "xml")

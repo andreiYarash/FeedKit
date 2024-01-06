@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/nmdias/FeedKit'
   s.authors = { 'Nuno Manuel Dias' => 'nmdias.pt@gmail.com' }
   s.source = { :git => 'https://github.com/andreiYarash/FeedKit.git', :tag => s.version }
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '13.0'
   s.osx.deployment_target = '10.12'
   s.tvos.deployment_target = '10.0'
   s.watchos.deployment_target = '3.0'

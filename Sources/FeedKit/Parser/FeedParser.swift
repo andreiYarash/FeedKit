@@ -29,24 +29,28 @@ import FoundationNetworking
 #endif
 
 /// An RSS and Atom feed parser. `FeedParser` uses `Foundation`'s `XMLParser`.
-public final class FeedParser {
-
-    private let dataSource: DataSource
-
-    private enum DataSource {
-        case data(Data)
-        case xmlStream(InputStream)
-    }
+public class FeedParser {
+    
+    private var data: Data?
+    private var url: URL?
+    private var xmlStream: InputStream?
     
     /// A FeedParser handler provider.
-    private var parser: FeedParserProtocol?
-
-    /// Initializes the parser with the xml or json contents encapsulated in a 
+    var parser: FeedParserProtocol?
+   
+    /// Initializes the parser with the JSON or XML content referenced by the given URL.
+    ///
+    /// - Parameter URL: URL whose contents are read to produce the feed data
+    public init(URL: URL) {
+        self.url = URL
+    }
+    
+    /// Initializes the parser with the xml or json contents encapsulated in a
     /// given data object.
     ///
     /// - Parameter data: XML or JSON data
     public init(data: Data) {
-        self.dataSource = .data(data)
+        self.data = data
     }
     
     /// Initializes the parser with the XML contents encapsulated in a
@@ -54,7 +58,7 @@ public final class FeedParser {
     ///
     /// - Parameter xmlStream: An InputStream that yields XML data.
     public init(xmlStream: InputStream) {
-        self.dataSource = .xmlStream(xmlStream)
+        self.xmlStream = xmlStream
     }
     
     /// Starts parsing the feed.
@@ -62,26 +66,37 @@ public final class FeedParser {
     /// - Returns: The parsed `Result`.
     public func parse() -> Result<Feed, ParserError> {
         
-        let parser: FeedParserProtocol
+        if let url = url {
+            // The `Data(contentsOf:)` initializer doesn't handle the `feed` URI scheme. As such,
+            // it's sanitized first, in case it's in fact a `feed` scheme.
+            guard let sanitizedSchemeUrl = url.replacing(scheme: "feed", with: "http") else {
+                return .failure(.internalError(reason: "Failed url sanitizing."))
+            }
 
-        switch dataSource {
-        case .data(let data):
+            do {
+                data = try Data(contentsOf: sanitizedSchemeUrl)
+            } catch {
+                return .failure(.internalError(reason: error.localizedDescription))
+            }
+        }
+        
+        if let data = data {
             guard let feedDataType = FeedDataType(data: data) else {
                 return .failure(.feedNotFound)
             }
-
             switch feedDataType {
             case .json: parser = JSONFeedParser(data: data)
             case .xml:  parser = XMLFeedParser(data: data)
             }
-
-        case let .xmlStream(xmlStream):
-            parser = XMLFeedParser(stream: xmlStream)
+            return parser!.parse()
         }
-
-        self.parser = parser
-
-        return parser.parse()
+        
+        if let xmlStream = xmlStream {
+            parser = XMLFeedParser(stream: xmlStream)
+            return parser!.parse()
+        }
+        
+        return .failure(.internalError(reason: "Fatal error. Unable to parse from the initialized state."))
         
     }
     
@@ -109,7 +124,8 @@ public final class FeedParser {
     
     /// Stops parsing XML feeds.
     public func abortParsing() {
-        parser?.stopParsing()
+        guard let xmlFeedParser = parser as? XMLFeedParser else { return }
+        xmlFeedParser.xmlParser.abortParsing()
     }
     
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -470,6 +470,14 @@
 		A0F79FBD1F642AE2007CFC08 /* RDFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F79FBC1F642AE2007CFC08 /* RDFTests.swift */; };
 		A0F79FBE1F642AE2007CFC08 /* RDFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F79FBC1F642AE2007CFC08 /* RDFTests.swift */; };
 		A0F79FBF1F642AE2007CFC08 /* RDFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F79FBC1F642AE2007CFC08 /* RDFTests.swift */; };
+		A9F914422B4A16AD0066F6F7 /* Array + Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F914412B4A16AD0066F6F7 /* Array + Equatable.swift */; };
+		A9F914432B4A16AD0066F6F7 /* Array + Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F914412B4A16AD0066F6F7 /* Array + Equatable.swift */; };
+		A9F914442B4A16AD0066F6F7 /* Array + Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F914412B4A16AD0066F6F7 /* Array + Equatable.swift */; };
+		A9F914452B4A16AD0066F6F7 /* Array + Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F914412B4A16AD0066F6F7 /* Array + Equatable.swift */; };
+		A9F914472B4A16B60066F6F7 /* URL + replacingScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F914462B4A16B60066F6F7 /* URL + replacingScheme.swift */; };
+		A9F914482B4A16B60066F6F7 /* URL + replacingScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F914462B4A16B60066F6F7 /* URL + replacingScheme.swift */; };
+		A9F914492B4A16B60066F6F7 /* URL + replacingScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F914462B4A16B60066F6F7 /* URL + replacingScheme.swift */; };
+		A9F9144A2B4A16B60066F6F7 /* URL + replacingScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F914462B4A16B60066F6F7 /* URL + replacingScheme.swift */; };
 		BB394B79223B362300366193 /* Ampersand.xml in Resources */ = {isa = PBXBuildFile; fileRef = BB394B77223B35D700366193 /* Ampersand.xml */; };
 		BB394B7A223B362400366193 /* Ampersand.xml in Resources */ = {isa = PBXBuildFile; fileRef = BB394B77223B35D700366193 /* Ampersand.xml */; };
 		BB394B7B223B362400366193 /* Ampersand.xml in Resources */ = {isa = PBXBuildFile; fileRef = BB394B77223B35D700366193 /* Ampersand.xml */; };
@@ -707,6 +715,8 @@
 		A0F6B9BD1F6E6FC700220625 /* FeedDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailTableViewController.swift; sourceTree = "<group>"; };
 		A0F6B9BE1F6E6FC700220625 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		A0F79FBC1F642AE2007CFC08 /* RDFTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDFTests.swift; sourceTree = "<group>"; };
+		A9F914412B4A16AD0066F6F7 /* Array + Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array + Equatable.swift"; sourceTree = "<group>"; };
+		A9F914462B4A16B60066F6F7 /* URL + replacingScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL + replacingScheme.swift"; sourceTree = "<group>"; };
 		BB394B77223B35D700366193 /* Ampersand.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Ampersand.xml; sourceTree = "<group>"; };
 		BB394B7C223B368C00366193 /* AmpersandTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmpersandTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -916,6 +926,8 @@
 		A0F6B7C61F6E6E9600220625 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A9F914412B4A16AD0066F6F7 /* Array + Equatable.swift */,
+				A9F914462B4A16B60066F6F7 /* URL + replacingScheme.swift */,
 				A0F6B7C81F6E6E9600220625 /* String + toBool.swift */,
 				A0F6B7C91F6E6E9600220625 /* String + toDate.swift */,
 				A0F6B7CA1F6E6E9600220625 /* String + toDuration.swift */,
@@ -1569,6 +1581,7 @@
 				A0F6B8711F6E6EB800220625 /* RSSFeed + mapAttributes.swift in Sources */,
 				A0F6B86C1F6E6EB800220625 /* MediaThumbnail.swift in Sources */,
 				A0F6B86A1F6E6EB800220625 /* MediaTag.swift in Sources */,
+				A9F914452B4A16AD0066F6F7 /* Array + Equatable.swift in Sources */,
 				A0F6B87D1F6E6EB800220625 /* RSSFeedSkipHour.swift in Sources */,
 				A0F6B8831F6E6EB800220625 /* JSONFeedParser.swift in Sources */,
 				A0F6B83D1F6E6EB800220625 /* AtomFeedEntryContent.swift in Sources */,
@@ -1593,6 +1606,7 @@
 				A0F6B83A1F6E6EB800220625 /* AtomFeedEntry.swift in Sources */,
 				A0F6B8741F6E6EB800220625 /* RSSFeedCategory.swift in Sources */,
 				A0F6B8621F6E6EB800220625 /* MediaRating.swift in Sources */,
+				A9F9144A2B4A16B60066F6F7 /* URL + replacingScheme.swift in Sources */,
 				A0F6B8551F6E6EB800220625 /* MediaCopyright.swift in Sources */,
 				A0F6B85E1F6E6EB800220625 /* MediaParam.swift in Sources */,
 				A0F6B87C1F6E6EB800220625 /* RSSFeedSkipDay.swift in Sources */,
@@ -1760,6 +1774,7 @@
 				A0F6B9291F6E6EBB00220625 /* RSSFeed + mapAttributes.swift in Sources */,
 				A0F6B9241F6E6EBB00220625 /* MediaThumbnail.swift in Sources */,
 				A0F6B9221F6E6EBB00220625 /* MediaTag.swift in Sources */,
+				A9F914432B4A16AD0066F6F7 /* Array + Equatable.swift in Sources */,
 				A0F6B9351F6E6EBB00220625 /* RSSFeedSkipHour.swift in Sources */,
 				A0F6B93B1F6E6EBB00220625 /* JSONFeedParser.swift in Sources */,
 				A0F6B8F51F6E6EBB00220625 /* AtomFeedEntryContent.swift in Sources */,
@@ -1784,6 +1799,7 @@
 				A0F6B8F21F6E6EBA00220625 /* AtomFeedEntry.swift in Sources */,
 				A0F6B92C1F6E6EBB00220625 /* RSSFeedCategory.swift in Sources */,
 				A0F6B91A1F6E6EBB00220625 /* MediaRating.swift in Sources */,
+				A9F914482B4A16B60066F6F7 /* URL + replacingScheme.swift in Sources */,
 				A0F6B90D1F6E6EBB00220625 /* MediaCopyright.swift in Sources */,
 				A0F6B9161F6E6EBB00220625 /* MediaParam.swift in Sources */,
 				A0F6B9341F6E6EBB00220625 /* RSSFeedSkipDay.swift in Sources */,
@@ -1858,6 +1874,7 @@
 				A0F6B8CD1F6E6EBA00220625 /* RSSFeed + mapAttributes.swift in Sources */,
 				A0F6B8C81F6E6EBA00220625 /* MediaThumbnail.swift in Sources */,
 				A0F6B8C61F6E6EBA00220625 /* MediaTag.swift in Sources */,
+				A9F914442B4A16AD0066F6F7 /* Array + Equatable.swift in Sources */,
 				A0F6B8D91F6E6EBA00220625 /* RSSFeedSkipHour.swift in Sources */,
 				A0F6B8DF1F6E6EBA00220625 /* JSONFeedParser.swift in Sources */,
 				A0F6B8991F6E6EBA00220625 /* AtomFeedEntryContent.swift in Sources */,
@@ -1882,6 +1899,7 @@
 				A0F6B8961F6E6EBA00220625 /* AtomFeedEntry.swift in Sources */,
 				A0F6B8D01F6E6EBA00220625 /* RSSFeedCategory.swift in Sources */,
 				A0F6B8BE1F6E6EBA00220625 /* MediaRating.swift in Sources */,
+				A9F914492B4A16B60066F6F7 /* URL + replacingScheme.swift in Sources */,
 				A0F6B8B11F6E6EBA00220625 /* MediaCopyright.swift in Sources */,
 				A0F6B8BA1F6E6EBA00220625 /* MediaParam.swift in Sources */,
 				A0F6B8D81F6E6EBA00220625 /* RSSFeedSkipDay.swift in Sources */,
@@ -1956,6 +1974,7 @@
 				A0F6B9851F6E6EBB00220625 /* RSSFeed + mapAttributes.swift in Sources */,
 				A0F6B9801F6E6EBB00220625 /* MediaThumbnail.swift in Sources */,
 				A0F6B97E1F6E6EBB00220625 /* MediaTag.swift in Sources */,
+				A9F914422B4A16AD0066F6F7 /* Array + Equatable.swift in Sources */,
 				A0F6B9911F6E6EBB00220625 /* RSSFeedSkipHour.swift in Sources */,
 				A0F6B9971F6E6EBB00220625 /* JSONFeedParser.swift in Sources */,
 				A0F6B9511F6E6EBB00220625 /* AtomFeedEntryContent.swift in Sources */,
@@ -1980,6 +1999,7 @@
 				A0F6B94E1F6E6EBB00220625 /* AtomFeedEntry.swift in Sources */,
 				A0F6B9881F6E6EBB00220625 /* RSSFeedCategory.swift in Sources */,
 				A0F6B9761F6E6EBB00220625 /* MediaRating.swift in Sources */,
+				A9F914472B4A16B60066F6F7 /* URL + replacingScheme.swift in Sources */,
 				A0F6B9691F6E6EBB00220625 /* MediaCopyright.swift in Sources */,
 				A0F6B9721F6E6EBB00220625 /* MediaParam.swift in Sources */,
 				A0F6B9901F6E6EBB00220625 /* RSSFeedSkipDay.swift in Sources */,

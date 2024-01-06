@@ -35,16 +35,16 @@ final class XMLFeedParser: NSObject, XMLParserDelegate, FeedParserProtocol {
     /// The Feed Type currently being parsed. The Initial value of this variable
     /// is unknown until a recognizable element that matches a feed type is
     /// found.
-    private var feedType: XMLFeedType?
+    var feedType: XMLFeedType?
 
     /// The RSS feed model.
-    private var rssFeed: RSSFeed?
+    var rssFeed: RSSFeed?
 
     /// The Atom feed model.
-    private var atomFeed: AtomFeed?
+    var atomFeed: AtomFeed?
 
     /// The XML Parser.
-    private let xmlParser: XMLParser
+    let xmlParser: XMLParser
     
     /// An XML Feed Parser, for rss and atom feeds.
     ///
